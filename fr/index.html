@@ -26,7 +26,6 @@
 (function(){var d=document.documentElement,s=null;d.classList.add("js");try{s=localStorage.getItem("theme")}catch(e){}
 d.dataset.theme=s||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");
 var p=new URLSearchParams(location.search).get("palette");if(p)d.dataset.palette=p;
-
 })();
 </script>
 <link rel="stylesheet" href="../assets/css/site.css">
@@ -36,466 +35,450 @@ var p=new URLSearchParams(location.search).get("palette");if(p)d.dataset.palette
 <a class="skip" href="#main">Aller au contenu</a>
 <div class="progress" aria-hidden="true"><span></span></div>
 <header class="top">
-  <div class="wrap top-in">
-    <a class="brand" href="#top" aria-label="Mouhib Bahri"><span class="brand-mark">MB</span><span class="brand-name">Mouhib Bahri</span></a>
-    <nav class="nav" aria-label="Navigation principale"><a href="#about" data-nav="about">Profil</a><a href="#experience" data-nav="experience">Expérience</a><a href="#projects" data-nav="projects">Projets</a><a href="#skills" data-nav="skills">Compétences</a><a href="#education" data-nav="education">Formation</a><a href="#contact" data-nav="contact">Contact</a></nav>
-    <div class="controls">
-      <div class="lang" role="group" aria-label="Langue">
-        <a href="../"  data-lang="en" hreflang="en" lang="en">EN</a>
-        <a href="./" aria-current="true" data-lang="fr" hreflang="fr" lang="fr">FR</a>
-      </div>
-      <button class="icon-btn theme" type="button" aria-label="Basculer entre thème clair et sombre"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" class="i-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" class="i-moon"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
-      <button class="icon-btn menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="sheet"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 8h16M4 16h16"/></svg></button>
-    </div>
-  </div>
-  <nav class="sheet" id="sheet" aria-label="Navigation mobile" hidden><a href="#about" data-nav="about"><span>01</span>Profil</a><a href="#experience" data-nav="experience"><span>02</span>Expérience</a><a href="#projects" data-nav="projects"><span>03</span>Projets</a><a href="#skills" data-nav="skills"><span>04</span>Compétences</a><a href="#education" data-nav="education"><span>05</span>Formation</a><a href="#contact" data-nav="contact"><span>06</span>Contact</a></nav>
+<div class="wrap top-in">
+<a class="brand" href="#top" aria-label="Mouhib Bahri"><span class="brand-mark">MB</span><span class="brand-name">Mouhib Bahri</span></a>
+<nav class="nav" aria-label="Navigation principale"><a href="#about" data-nav="about">Profil</a><a href="#experience" data-nav="experience">Expérience</a><a href="#projects" data-nav="projects">Projets</a><a href="#skills" data-nav="skills">Compétences</a><a href="#education" data-nav="education">Formation</a><a href="#contact" data-nav="contact">Contact</a></nav>
+<div class="controls">
+<div class="lang" role="group" aria-label="Langue">
+<a href="../"  data-lang="en" hreflang="en" lang="en">EN</a>
+<a href="./" aria-current="true" data-lang="fr" hreflang="fr" lang="fr">FR</a>
+</div>
+<button class="icon-btn theme" type="button" aria-label="Basculer entre thème clair et sombre"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" class="i-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" class="i-moon"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></button>
+<button class="icon-btn menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="sheet"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 8h16M4 16h16"/></svg></button>
+</div>
+</div>
+<nav class="sheet" id="sheet" aria-label="Navigation mobile" hidden><a href="#about" data-nav="about"><span>01</span>Profil</a><a href="#experience" data-nav="experience"><span>02</span>Expérience</a><a href="#projects" data-nav="projects"><span>03</span>Projets</a><a href="#skills" data-nav="skills"><span>04</span>Compétences</a><a href="#education" data-nav="education"><span>05</span>Formation</a><a href="#contact" data-nav="contact"><span>06</span>Contact</a></nav>
 </header>
 <nav class="rail" aria-label="Sections"><a href="#about" data-nav="about"><span>01</span>Profil</a><a href="#experience" data-nav="experience"><span>02</span>Expérience</a><a href="#projects" data-nav="projects"><span>03</span>Projets</a><a href="#skills" data-nav="skills"><span>04</span>Compétences</a><a href="#education" data-nav="education"><span>05</span>Formation</a><a href="#contact" data-nav="contact"><span>06</span>Contact</a></nav>
 <main id="main">
-
-  <section class="hero" id="top" aria-labelledby="hero-name">
-    <div class="hero-grid wrap">
-      <div class="hero-copy">
-        <p class="status"><span class="pulse" aria-hidden="true"></span>Disponible pour un stage de fin d’études à partir de février 2027</p>
-        <h1 id="hero-name">Mouhib Bahri</h1>
-        <p class="hero-role">Ingénieur logiciel, agents IA et systèmes distribués</p>
-        <p class="hero-pitch">Je conçois des systèmes d’agents IA et l’infrastructure backend qui les porte : mémoire persistante, multi-tenant, observabilité et stockage distribué.</p>
-        <p class="hero-sub">Élève ingénieur en dernière année de génie logiciel à l’INSAT, diplôme en 2027.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact">Me contacter<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <a class="btn btn-ghost" href="#projects">Voir les projets</a>
-          <span class="hero-social">
-            <a class="icon-btn" href="https://github.com/MouhibBahri" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg></a>
-            <a class="icon-btn" href="https://www.linkedin.com/in/mouhib-bahri" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
-            <a class="icon-btn" href="mailto:mouhib.bahri.se@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg></a>
-          </span>
-        </div>
-      </div>
-      <figure class="hero-fig fig-card">
-        <svg class="fx" viewBox="0 0 420 304" role="img" aria-label="Fig. 0  La pile sur laquelle je travaille" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 8 4 0 8z" class="fx-arrowhead"/></marker></defs><g class="fx-layer" style="--i:0"><rect x="70" y="18" width="330" height="46" rx="6"/><text class="fx-idx" x="54" y="45" text-anchor="end">L4</text><text class="fx-label fx-left" x="86" y="38">Runtime d’agents</text><text class="fx-sub fx-left" x="86" y="53">outils, tâches planifiées, sous-agents</text><circle class="fx-led" cx="382" cy="41" r="3.5"/></g><g class="fx-layer" style="--i:1"><rect x="70" y="74" width="330" height="46" rx="6"/><text class="fx-idx" x="54" y="101" text-anchor="end">L3</text><text class="fx-label fx-left" x="86" y="94">Mémoire persistante</text><text class="fx-sub fx-left" x="86" y="109">rappel vectoriel, décroissance, feedback</text><circle class="fx-led" cx="382" cy="97" r="3.5"/></g><g class="fx-layer" style="--i:2"><rect x="70" y="130" width="330" height="46" rx="6"/><text class="fx-idx" x="54" y="157" text-anchor="end">L2</text><text class="fx-label fx-left" x="86" y="150">Multi-tenant</text><text class="fx-sub fx-left" x="86" y="165">accès aux données par tenant</text><circle class="fx-led" cx="382" cy="153" r="3.5"/></g><g class="fx-layer" style="--i:3"><rect x="70" y="186" width="330" height="46" rx="6"/><text class="fx-idx" x="54" y="213" text-anchor="end">L1</text><text class="fx-label fx-left" x="86" y="206">Observabilité</text><text class="fx-sub fx-left" x="86" y="221">traces, logs, session replay</text><circle class="fx-led" cx="382" cy="209" r="3.5"/></g><g class="fx-layer" style="--i:4"><rect x="70" y="242" width="330" height="46" rx="6"/><text class="fx-idx" x="54" y="269" text-anchor="end">L0</text><text class="fx-label fx-left" x="86" y="262">Stockage distribué</text><text class="fx-sub fx-left" x="86" y="277">réplication, tolérance aux pannes</text><circle class="fx-led" cx="382" cy="265" r="3.5"/></g><path id="hspine" d="M354 12 V 296" class="fx-wire fx-dash"/><circle r="3.6" class="fx-dot"><animateMotion dur="5s" begin="0s" repeatCount="indefinite" rotate="auto"><mpath href="#hspine"/></animateMotion></circle></svg>
-        <figcaption>Fig. 0  La pile sur laquelle je travaille</figcaption>
-      </figure>
-    </div>
-    <div class="wrap"><dl class="stats"><div class="stat"><dt>commits sur une plateforme en production</dt><dd>690+</dd></div><div class="stat"><dt>pull requests fusionnées</dt><dd>100+</dd></div><div class="stat"><dt>communes et entreprises sur cette plateforme</dt><dd>90+</dd></div><div class="stat"><dt>autres agents réutilisent ma mémoire d’agent</dt><dd>4</dd></div><div class="stat"><dt>concours de programmation TCPC 2024</dt><dd>Top 15</dd></div><div class="stat"><dt>de stages et de travail à temps partiel</dt><dd>2+ ans</dd></div></dl></div>
-  </section>
-
-  <section class="section" id="about" aria-labelledby="about-title">
-    <div class="wrap">
-      <header class="sec-head"><span class="sec-n">§01</span><h2 id="about-title">Profil</h2></header>
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <p class="lead">Élève ingénieur en dernière année de génie logiciel à l’INSAT, avec plus de deux ans de stages et de travail à temps partiel sur des systèmes en production : agents IA, web full-stack, blockchain, DevOps et systèmes distribués. J’aime les problèmes qui ont une vraie profondeur technique, où je peux chercher, concevoir et porter une solution plutôt qu’appliquer un cahier des charges. Je travaille surtout en TypeScript et en C++. Mon terrain de prédilection est le backend et les systèmes, avec assez de polyvalence full-stack pour livrer de bout en bout.</p>
-          <p>J’ai commencé par la programmation compétitive (C++), qui m’a donné l’aisance en algorithmique et en structures de données. Mon réflexe le plus fort est architectural : je lis d’abord les papiers et la documentation, puis je conçois le système correctement.</p>
-        </div>
-        <aside class="about-side reveal">
-          <h3 class="mini-title">Ma façon de travailler</h3>
-          <ol class="work-list"><li><span>01</span>Lire la documentation et les papiers avant d’écrire du code.</li><li><span>02</span>Prendre en main des problèmes flous, sans modèle existant.</li><li><span>03</span>Backend et systèmes d’abord, avec une vraie polyvalence full-stack.</li><li><span>04</span>Revue de code, tests unitaires et Scrum au quotidien.</li></ol>
-          <h3 class="mini-title">Centres d’intérêt</h3>
-          <ul class="tags"><li>Agents IA</li><li>Mémoire d’agent</li><li>RAG</li><li>Systèmes distribués</li><li>Architecture backend</li><li>Observabilité</li><li>Blockchain / Web3</li><li>DevOps</li></ul>
-        </aside>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="experience" aria-labelledby="experience-title">
-    <div class="wrap">
-      <header class="sec-head"><span class="sec-n">§02</span><h2 id="experience-title">Expérience</h2></header>
-      <div class="orgs">
-        <article class="org reveal">
-          <header class="org-head">
-            <span class="logo" aria-hidden="true">Tw</span>
-            <div class="org-id">
-              <h3>Twigbit Technologies GmbH</h3>
-              <p class="mono">Berlin, Allemagne · À distance · 3 postes</p>
-            </div>
-            <span class="mono org-span">juil. 2025 – oct. 2026</span>
-          </header>
-          <ol class="roles">
-            <li class="role">
-              <div class="role-head"><h4>Ingénieur logiciel (temps partiel)</h4><span class="mono dates">oct. 2025 – oct. 2026</span></div>
-              
-      <p class="role-sum">Deux volets : la plateforme de développement durable 2zero, utilisée par plus de 90 communes et entreprises, et la refonte du site d’un grand client.</p>
-      <div class="role-row">
-        <ul class="metrics"><li>690+ commits</li><li>100+ PR fusionnées</li><li>20+ PR relues</li></ul>
-        <button class="toggle" type="button" aria-expanded="false" aria-controls="hl-fr-1" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" class="i-plus"><path d="M12 5v14M5 12h14"/></svg><span>Détails</span><span class="count">4</span></button>
-      </div>
-      <ul class="points" id="hl-fr-1"><li>Développé plus de 10 pages et 50 fonctionnalités de l’application web 2zero, de l’interface aux routes API Next.js qui adaptent le backend existant.</li><li>Conçu l’authentification OTP : jetons d’accès et de rafraîchissement, vérification d’e-mail, limitation de débit sur Redis.</li><li>Mené l’intégration PostHog et OpenTelemetry, puis diagnostiqué 7 incidents de production grâce aux traces et au session replay.</li><li>Dans l’équipe de refonte, développé des agents LLM qui permettent au marketing du client de créer des composants à partir d’un prompt, via un CMS headless exposé en MCP avec OAuth.</li></ul>
-      <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>Drizzle</li><li>PostgreSQL</li><li>Redis</li><li>Tinybird</li><li>PostHog</li><li>OpenTelemetry</li><li>Python</li><li>Django</li><li>MCP</li></ul>
-            </li>
-            <li class="role">
-              <div class="role-head"><h4>Stagiaire ingénieur logiciel, IA et automatisation</h4><span class="mono dates">juil. 2026 – sept. 2026</span></div>
-              
-      <p class="role-sum">À temps plein dans le monorepo TypeScript des agents de l’entreprise, dont j’ai été le premier contributeur en commits sur la période.</p>
-      <div class="role-row">
-        <ul class="metrics"><li>154 commits</li><li>16+ PR relues et fusionnées</li></ul>
-        <button class="toggle" type="button" aria-expanded="false" aria-controls="hl-fr-2" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" class="i-plus"><path d="M12 5v14M5 12h14"/></svg><span>Détails</span><span class="count">4</span></button>
-      </div>
-      <ul class="points" id="hl-fr-2"><li>Conçu le système de mémoire persistante des agents, adopté ensuite par 4 autres agents.</li><li>Développé Woodpecker, un agent multi-tenant de content marketing, à partir d’un dossier vide.</li><li>Livré Twig, un agent Slack qui collecte le compte rendu quotidien de chaque membre de l’équipe dans Notion.</li><li>Développé des packages partagés : connexion par OTP e-mail avec Argon2id, e-mails transactionnels, type de colonne vectorielle.</li></ul>
-      <ul class="tags"><li>TypeScript</li><li>Next.js</li><li>Turso</li><li>Drizzle</li><li>Vercel AI SDK</li><li>eve</li><li>Slack API</li><li>Notion API</li></ul>
-            </li>
-            <li class="role">
-              <div class="role-head"><h4>Stagiaire ingénieur logiciel</h4><span class="mono dates">juil. 2025 – sept. 2025</span></div>
-              
-      <p class="role-sum">Un calculateur de CO2 résidentiel, livré en production avec Next.js et en package réutilisable du monorepo.</p>
-      <div class="role-row">
-        <ul class="metrics"><li>40+ formules</li><li>12 modèles de rénovation</li></ul>
-        <button class="toggle" type="button" aria-expanded="false" aria-controls="hl-fr-3" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" class="i-plus"><path d="M12 5v14M5 12h14"/></svg><span>Détails</span><span class="count">2</span></button>
-      </div>
-      <ul class="points" id="hl-fr-3"><li>Recherché et modélisé des formules énergétiques et financières : dimensionnement CVC, simulation PV horaire sur données PVGIS, ROI et retour sur investissement.</li><li>Construit des modèles de rénovation avec analyse coûts-bénéfices et plans d’amortissement, des panneaux solaires à l’isolation.</li></ul>
-      <ul class="tags"><li>Next.js</li><li>TypeScript</li></ul>
-            </li></ol>
-        </article>
-        <article class="org single reveal">
-          <header class="org-head">
-            <span class="logo" aria-hidden="true">Ax</span>
-            <div class="org-id">
-              <h3>Développeur full-stack (temps partiel)</h3>
-              <p class="mono"><span class="org-name">Axess Logistique</span> · Temps partiel</p>
-            </div>
-            <span class="mono org-span">nov. 2024 – mars 2025</span>
-          </header>
-          <div class="single-body">
-      <p class="role-sum">Une plateforme de livraison B2B, dans un environnement startup.</p>
-      <div class="role-row">
-        <ul class="metrics"><li>165+ commits</li><li>40+ PR</li><li>2M+ lignes MySQL</li></ul>
-        <button class="toggle" type="button" aria-expanded="false" aria-controls="hl-fr-4" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" class="i-plus"><path d="M12 5v14M5 12h14"/></svg><span>Détails</span><span class="count">3</span></button>
-      </div>
-      <ul class="points" id="hl-fr-4"><li>Refactoré du code Symfony historique pour les performances et administré les bases MySQL.</li><li>Travaillé directement avec plus de 10 utilisateurs métier, des chefs à la finance, sur les besoins et les correctifs.</li><li>Maintenu les serveurs Cloudways en SSH, avec un serveur de test avant chaque mise en production.</li></ul>
-      <ul class="tags"><li>Symfony</li><li>MySQL</li><li>Twig</li><li>Tailwind CSS</li><li>Linux</li></ul></div>
-        </article>
-        <article class="org single reveal">
-          <header class="org-head">
-            <span class="logo" aria-hidden="true">Pp</span>
-            <div class="org-id">
-              <h3>Stagiaire développeur full-stack</h3>
-              <p class="mono"><span class="org-name">Prima Pub</span> · À distance</p>
-            </div>
-            <span class="mono org-span">août 2024 – oct. 2024</span>
-          </header>
-          <div class="single-body">
-      <p class="role-sum">Une plateforme e-commerce construite en 6 semaines, puis complétée par un tableau de bord d’administration.</p>
-      <div class="role-row">
-        <ul class="metrics"><li>100 PageSpeed desktop</li><li>96 mobile</li></ul>
-        <button class="toggle" type="button" aria-expanded="false" aria-controls="hl-fr-5" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" class="i-plus"><path d="M12 5v14M5 12h14"/></svg><span>Détails</span><span class="count">2</span></button>
-      </div>
-      <ul class="points" id="hl-fr-5"><li>Rendu serveur et génération statique incrémentale : 92 en SEO, 92 en accessibilité, 100 en bonnes pratiques.</li><li>NextAuth.js avec contrôle d’accès par rôle basé sur JWT.</li></ul>
-      <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>Prisma</li><li>PostgreSQL</li><li>Tailwind CSS</li></ul></div>
-        </article>
-        <article class="org single reveal">
-          <header class="org-head">
-            <span class="logo" aria-hidden="true">JE</span>
-            <div class="org-id">
-              <h3>Stagiaire développeur backend</h3>
-              <p class="mono"><span class="org-name">Junior Enterprise INSAT</span> · Association étudiante</p>
-            </div>
-            <span class="mono org-span">août 2024 – oct. 2024</span>
-          </header>
-          <div class="single-body">
-      <p class="role-sum">Le backend d’un tableau de bord de gestion financière.</p>
-      <div class="role-row">
-        <ul class="metrics"><li>15+ endpoints</li><li>3 sprints</li></ul>
-        <button class="toggle" type="button" aria-expanded="false" aria-controls="hl-fr-6" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" class="i-plus"><path d="M12 5v14M5 12h14"/></svg><span>Détails</span><span class="count">1</span></button>
-      </div>
-      <ul class="points" id="hl-fr-6"><li>Conçu l’API avec DTO et validation, documentée avec Swagger, avec mise en cache des gros volumes financiers.</li></ul>
-      <ul class="tags"><li>NestJS</li><li>MySQL</li><li>TypeORM</li><li>Swagger</li></ul></div>
-        </article></div>
-    </div>
-  </section>
-
-  <section class="section" id="projects" aria-labelledby="projects-title">
-    <div class="wrap">
-      <header class="sec-head"><span class="sec-n">§03</span><h2 id="projects-title">Projets choisis</h2></header>
-      <div class="cards">
-    <article class="card reveal" id="p-memory">
-      <figure class="card-fig">
-        <svg class="fx" viewBox="0 0 400 222" role="img" aria-label="Mémoire persistante pour agents IA" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 8 4 0 8z" class="fx-arrowhead"/></marker></defs><g class="fx-node "><rect x="14" y="20" width="96" height="46" rx="6"/><text class="fx-label" x="62" y="41" text-anchor="middle">agent</text><text class="fx-sub" x="62" y="55" text-anchor="middle">outils mémoire</text></g><g class="fx-node "><rect x="290" y="20" width="96" height="46" rx="6"/><text class="fx-label" x="338" y="41" text-anchor="middle">libSQL</text><text class="fx-sub" x="338" y="55" text-anchor="middle">F8_BLOB · int8</text></g><path id="mw" d="M110 34 H290" class="fx-wire" marker-end="url(#ah)"/><text class="fx-sub" x="200" y="28" text-anchor="middle">store · 1024-d → int8</text><path id="mr" d="M290 54 H110" class="fx-wire" marker-end="url(#ah)"/><text class="fx-sub fx-accent-text" x="200" y="72" text-anchor="middle">(1 − d) · 0.95^Δdays · top 5</text><circle r="3.6" class="fx-dot"><animateMotion dur="3.2s" begin="0s" repeatCount="indefinite" rotate="auto"><mpath href="#mw"/></animateMotion></circle><circle r="3.6" class="fx-dot"><animateMotion dur="3.2s" begin="-1.6s" repeatCount="indefinite" rotate="auto"><mpath href="#mr"/></animateMotion></circle><text class="fx-cap" x="14" y="104">poids des souvenirs</text><text class="fx-sub fx-left" x="14" y="123">preference</text><rect class="fx-track" x="96" y="114" width="200" height="10" rx="2"/><rect class="fx-bar fx-bar-up" x="96" y="114" width="164" height="10" rx="2"/><text class="fx-sub fx-left" x="14" y="143">correction</text><rect class="fx-track" x="96" y="134" width="200" height="10" rx="2"/><rect class="fx-bar fx-bar-up" x="96" y="134" width="190" height="10" rx="2"/><text class="fx-sub fx-left" x="14" y="163">insight</text><rect class="fx-track" x="96" y="154" width="200" height="10" rx="2"/><rect class="fx-bar fx-bar-down" x="96" y="154" width="115.99999999999999" height="10" rx="2"/><text class="fx-sub fx-left" x="14" y="183">discovery</text><rect class="fx-track" x="96" y="174" width="200" height="10" rx="2"/><rect class="fx-bar fx-bar-down" x="96" y="174" width="72" height="10" rx="2"/><text class="fx-sub fx-left" x="14" y="203">insight</text><rect class="fx-track" x="96" y="194" width="200" height="10" rx="2"/><rect class="fx-bar fx-bar-gc" x="96" y="194" width="28.000000000000004" height="10" rx="2"/><text class="fx-sub fx-left" x="306" y="123">↑ EWMA</text><text class="fx-sub fx-left" x="306" y="143">α = 0.3</text><text class="fx-sub fx-left" x="306" y="163">↓ e^(−0.01t)</text><text class="fx-sub fx-left" x="306" y="183">t½ ≈ 69 d</text><text class="fx-sub fx-left" x="306" y="203">GC</text></svg>
-        <figcaption><span>Fig. 1</span></figcaption>
-      </figure>
-      <div class="card-body">
-        <div class="card-top">
-          <span class="badge">Projet d’entreprise, code non public</span>
-          
-        </div>
-        <h3>Mémoire persistante pour agents IA</h3>
-        <p class="meta mono">juil. 2026<span aria-hidden="true">·</span>Conception et réalisation<span aria-hidden="true">·</span>Twigbit</p>
-        <p class="card-line">Une mémoire RAG inter-sessions et auto-ajustée pour un agent en production. Elle s’améliore à l’usage et s’efface quand elle vieillit.</p>
-        <details class="more">
-          <summary><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" class="i-plus"><path d="M12 5v14M5 12h14"/></svg><span>Fonctionnement</span><span class="count">4</span></summary>
-          <ul class="points"><li>Embeddings de 1024 dimensions, quantifiés en int8 dans des colonnes libSQL F8_BLOB via un type Drizzle sur mesure.</li><li>Classement par (1 − d) × 0,95^jours, plus injection automatique des meilleurs souvenirs en début de session.</li><li>Poids ajustés par le feedback de l’agent (EWMA, α = 0,3) et décroissance nocturne, demi-vie d’environ 69 jours.</li><li>Nettoyage nocturne, et les souvenirs rappelés sont traités comme des données, jamais comme des commandes.</li></ul>
-        </details>
-        <p class="result"><span class="mono">Résultat</span>Adopté comme modèle de mémoire par 4 autres agents de l’entreprise.</p>
-        <ul class="tags"><li>TypeScript</li><li>Turso / libSQL</li><li>Drizzle</li><li>eve</li><li>Vercel AI SDK</li><li>RAG</li></ul>
-      </div>
-    </article>
-    <article class="card reveal" id="p-ddr">
-      <figure class="card-fig">
-        <svg class="fx" viewBox="0 0 404 226" role="img" aria-label="Distributed Dataset Repository" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 8 4 0 8z" class="fx-arrowhead"/></marker></defs><g class="fx-node "><rect x="132" y="10" width="140" height="44" rx="6"/><text class="fx-label" x="202" y="30" text-anchor="middle">master</text><text class="fx-sub" x="202" y="44" text-anchor="middle">metadata · BoltDB</text></g><g class="fx-node "><rect x="10" y="128" width="60" height="44" rx="6"/><text class="fx-label" x="40" y="154" text-anchor="middle">client</text></g><g class="fx-node "><rect x="102" y="128" width="76" height="44" rx="6"/><text class="fx-label" x="140" y="148" text-anchor="middle">S1</text><text class="fx-sub" x="140" y="162" text-anchor="middle">replica</text></g><g class="fx-node "><rect x="210" y="128" width="76" height="44" rx="6"/><text class="fx-label" x="248" y="148" text-anchor="middle">S2</text><text class="fx-sub" x="248" y="162" text-anchor="middle">replica</text></g><g class="fx-node fx-tail"><rect x="318" y="128" width="76" height="44" rx="6"/><text class="fx-label" x="356" y="148" text-anchor="middle">S3</text><text class="fx-sub" x="356" y="162" text-anchor="middle">replica</text></g><path id="cw" d="M70 138 H102 M178 138 H210 M286 138 H318" class="fx-wire" marker-end="url(#ah)"/><path id="ca" d="M318 162 H286 M210 162 H178 M102 162 H70" class="fx-wire fx-dash" marker-end="url(#ah)"/><path id="cwp" d="M70 138 H318" fill="none" stroke="none"/><path id="cap" d="M318 162 H70" fill="none" stroke="none"/><path d="M140 128 L178 54 M248 128 L226 54 M356 128 L252 54" class="fx-wire fx-hb"/><circle cx="14" cy="196" r="3.6" class="fx-dot"/><text class="fx-sub fx-left" x="24" y="199">write</text><circle cx="74" cy="196" r="3.6" class="fx-dot fx-ack"/><text class="fx-sub fx-left" x="84" y="199">ack</text><path d="M128 196 h18" class="fx-wire fx-hb"/><text class="fx-sub fx-left" x="152" y="199">heartbeat 10 s · timeout 15 s</text><text class="fx-cap" x="10" y="218">64 MiB chunks · 1 MiB blocks · CRC32 · RF = 3</text><circle r="4" class="fx-dot"><animateMotion dur="4.4s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.42;1" calcMode="linear"><mpath href="#cwp"/></animateMotion><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.42;0.43;1" dur="4.4s" repeatCount="indefinite"/></circle><circle r="4" class="fx-dot fx-ack"><animateMotion dur="4.4s" repeatCount="indefinite" keyPoints="0;0;1;1" keyTimes="0;0.5;0.92;1" calcMode="linear"><mpath href="#cap"/></animateMotion><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.49;0.5;0.92;0.93" dur="4.4s" repeatCount="indefinite"/></circle><text class="fx-sub fx-accent-text fx-fsync" x="356" y="190" text-anchor="middle">fsync · seal<animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.4;0.43;0.55;0.6;1" dur="4.4s" repeatCount="indefinite"/></text></svg>
-        <figcaption><span>Fig. 2</span></figcaption>
-      </figure>
-      <div class="card-body">
-        <div class="card-top">
-          <span class="badge badge-open">Projet de synthèse universitaire</span>
-          <a class="link" href="https://github.com/Amir-Mallek/Distributed-Dataset-Repository" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>Dépôt</a>
-        </div>
-        <h3>Distributed Dataset Repository</h3>
-        <p class="meta mono">févr. – mai 2026<span aria-hidden="true">·</span>Équipe de 4<span aria-hidden="true">·</span>~31 % du code écrit à la main</p>
-        <p class="card-line">Un stockage de chunks répliqués pour datasets IA, en Go et gRPC, inspiré du Google File System et conçu pour des datasets de plus de 50 Go.</p>
-        <details class="more">
-          <summary><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" class="i-plus"><path d="M12 5v14M5 12h14"/></svg><span>Fonctionnement</span><span class="count">4</span></summary>
-          <ul class="points"><li>Chunks de 64 Mio envoyés en blocs de 1 Mio vérifiés par CRC32, facteur de réplication 3 en chaîne.</li><li>J’ai réalisé la gestion des pannes du master : heartbeat toutes les 10 s, timeout de 15 s, re-réplication automatique.</li><li>Acquittements en chaîne : fsync, attente de l’aval, scellement, ack vers l’amont. Un ack client garantit que toutes les répliques sont persistées.</li><li>Une suite d’injection de pannes tue un nœud et corrompt un chunk dans Docker, puis vérifie le SHA-256 de la copie reconstruite.</li></ul>
-        </details>
-        <p class="result"><span class="mono">Résultat</span>Présenté aux enseignants du cours. Équipe : Amir Mallek, Roua Ayadi, Moncef Koubaa et moi.</p>
-        <ul class="tags"><li>Go</li><li>gRPC</li><li>Protocol Buffers</li><li>BoltDB</li><li>Docker Compose</li></ul>
-      </div>
-    </article>
-    <article class="card reveal" id="p-woodpecker">
-      <figure class="card-fig">
-        <svg class="fx" viewBox="0 0 400 222" role="img" aria-label="Woodpecker, agent de content marketing" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 8 4 0 8z" class="fx-arrowhead"/></marker></defs><g class="fx-node "><rect x="10" y="20" width="108" height="46" rx="6"/><text class="fx-label" x="64" y="41" text-anchor="middle">8 sources</text><text class="fx-sub" x="64" y="55" text-anchor="middle">RSS · SEO · CRM</text></g><g class="fx-node "><rect x="146" y="20" width="108" height="46" rx="6"/><text class="fx-label" x="200" y="41" text-anchor="middle">score 0–1</text><text class="fx-sub" x="200" y="55" text-anchor="middle">vs. clients cibles</text></g><g class="fx-node "><rect x="282" y="20" width="108" height="46" rx="6"/><text class="fx-label" x="336" y="41" text-anchor="middle">idées</text><text class="fx-sub" x="336" y="55" text-anchor="middle">hebdo / tenant</text></g><g class="fx-node "><rect x="282" y="110" width="108" height="46" rx="6"/><text class="fx-label" x="336" y="131" text-anchor="middle">plan</text><text class="fx-sub" x="336" y="145" text-anchor="middle">par canal</text></g><g class="fx-node "><rect x="146" y="110" width="108" height="46" rx="6"/><text class="fx-label" x="200" y="131" text-anchor="middle">brouillon</text><text class="fx-sub" x="200" y="145" text-anchor="middle">sous-agent</text></g><g class="fx-node "><rect x="10" y="110" width="108" height="46" rx="6"/><text class="fx-label" x="64" y="131" text-anchor="middle">relecture</text><text class="fx-sub" x="64" y="145" text-anchor="middle">commentaires</text></g><path id="pp" d="M118 43 H146 M254 43 H282 M336 66 V110 M282 133 H254 M146 133 H118" class="fx-wire" marker-end="url(#ah)"/><path id="ppm" d="M118 43 H282 M336 66 V110 M282 133 H118" fill="none" stroke="none"/><path d="M64 156 C64 182 200 182 200 156" class="fx-wire fx-dash" marker-end="url(#ah)"/><text class="fx-sub" x="132" y="190" text-anchor="middle">les commentaires relancent la rédaction</text><circle r="3.6" class="fx-dot"><animateMotion dur="5s" repeatCount="indefinite"><mpath href="#ppm"/></animateMotion></circle><text class="fx-cap" x="10" y="216">tenant_id filtré à la frontière d’accès aux données</text></svg>
-        <figcaption><span>Fig. 3</span></figcaption>
-      </figure>
-      <div class="card-body">
-        <div class="card-top">
-          <span class="badge">Projet d’entreprise, code non public</span>
-          
-        </div>
-        <h3>Woodpecker, agent de content marketing</h3>
-        <p class="meta mono">juil. – sept. 2026<span aria-hidden="true">·</span>Réalisé de bout en bout<span aria-hidden="true">·</span>PR d’environ 13k lignes</p>
-        <p class="card-line">Un agent multi-tenant qui surveille le marché, propose des idées, planifie par canal et rédige des posts ancrés dans leurs sources.</p>
-        <details class="more">
-          <summary><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" class="i-plus"><path d="M12 5v14M5 12h14"/></svg><span>Fonctionnement</span><span class="count">3</span></summary>
-          <ul class="points"><li>Une vingtaine d’outils, dont une veille nocturne sur 8 types de sources, notées de 0 à 1 selon les clients cibles de chaque tenant.</li><li>Isolation des tenants appliquée dans 13 repositories, au niveau de l’accès aux données : aucune requête ne peut l’oublier.</li><li>Une application Next.js avec posts, calendrier et relecture, et un chat d’agent qui survit à un rafraîchissement.</li></ul>
-        </details>
-        
-        <ul class="tags"><li>TypeScript</li><li>Next.js</li><li>eve</li><li>Turso</li><li>Drizzle</li><li>Vercel AI SDK</li></ul>
-      </div>
-    </article>
-    <article class="card reveal" id="p-2zero">
-      <figure class="card-fig">
-        <svg class="fx" viewBox="0 0 400 214" role="img" aria-label="Plateforme web 2zero" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 8 4 0 8z" class="fx-arrowhead"/></marker></defs><g class="fx-node "><rect x="10" y="20" width="100" height="46" rx="6"/><text class="fx-label" x="60" y="41" text-anchor="middle">navigateur</text><text class="fx-sub" x="60" y="55" text-anchor="middle">Next.js</text></g><g class="fx-node "><rect x="150" y="20" width="100" height="46" rx="6"/><text class="fx-label" x="200" y="41" text-anchor="middle">API routes</text><text class="fx-sub" x="200" y="55" text-anchor="middle">Next.js</text></g><g class="fx-node fx-ghost"><rect x="290" y="20" width="100" height="46" rx="6"/><text class="fx-label" x="340" y="41" text-anchor="middle">backend</text><text class="fx-sub" x="340" y="55" text-anchor="middle">existant</text></g><g class="fx-node "><rect x="150" y="112" width="100" height="40" rx="6"/><text class="fx-label" x="200" y="130" text-anchor="middle">PostgreSQL</text><text class="fx-sub" x="200" y="144" text-anchor="middle">Drizzle</text></g><g class="fx-node "><rect x="290" y="112" width="100" height="40" rx="6"/><text class="fx-label" x="340" y="130" text-anchor="middle">Tinybird</text><text class="fx-sub" x="340" y="144" text-anchor="middle">events</text></g><g class="fx-node "><rect x="10" y="112" width="100" height="40" rx="6"/><text class="fx-label" x="60" y="130" text-anchor="middle">PostHog</text><text class="fx-sub" x="60" y="144" text-anchor="middle">OTLP</text></g><path id="o1" d="M110 43 H150 M250 43 H290" class="fx-wire" marker-end="url(#ah)"/><path d="M200 66 V112 M340 66 V112" class="fx-wire" marker-end="url(#ah)"/><path id="ot" d="M170 66 C150 92 110 92 80 112" class="fx-wire fx-dash fx-otel" marker-end="url(#ah)"/><path d="M50 66 V112" class="fx-wire fx-dash fx-otel" marker-end="url(#ah)"/><path id="o1m" d="M110 43 H290" fill="none" stroke="none"/><circle r="3.6" class="fx-dot"><animateMotion dur="3s" begin="0s" repeatCount="indefinite" rotate="auto"><mpath href="#o1m"/></animateMotion></circle><circle r="3.6" class="fx-dot"><animateMotion dur="3s" begin="-1.2s" repeatCount="indefinite" rotate="auto"><mpath href="#ot"/></animateMotion></circle><text class="fx-cap" x="10" y="186">traces · logs · erreurs · session replay</text><text class="fx-cap" x="10" y="204">prod · preview · local (Docker)</text></svg>
-        <figcaption><span>Fig. 4</span></figcaption>
-      </figure>
-      <div class="card-body">
-        <div class="card-top">
-          <span class="badge">Projet d’entreprise, code non public</span>
-          <a class="link" href="https://2zero.earth" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 17 17 7M9 7h8v8"/></svg>2zero.earth</a>
-        </div>
-        <h3>Plateforme web 2zero</h3>
-        <p class="meta mono">oct. 2025 – oct. 2026<span aria-hidden="true">·</span>Développeur web principal<span aria-hidden="true">·</span>90+ organisations</p>
-        <p class="card-line">Une plateforme de développement durable en production. J’ai été l’un des principaux développeurs de sa version web dès le premier jour.</p>
-        <details class="more">
-          <summary><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" class="i-plus"><path d="M12 5v14M5 12h14"/></svg><span>Fonctionnement</span><span class="count">3</span></summary>
-          <ul class="points"><li>Plus de 10 pages et 50 fonctionnalités, de la modération communautaire à une carte Leaflet et des classements.</li><li>Authentification OTP, logs et traces envoyés en OTLP vers PostHog, avec des stack traces lisibles en production.</li><li>Gestion des dates migrée vers l’API Temporal, pour des comptes à rebours et classements justes quel que soit le fuseau.</li></ul>
-        </details>
-        
-        <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>PostgreSQL</li><li>Redis</li><li>Tinybird</li><li>PostHog</li><li>OpenTelemetry</li></ul>
-      </div>
-    </article></div>
-      <h3 class="sub-title">Autres projets</h3>
-      <ul class="minis">
-      <li class="mini reveal">
-        <div class="mini-head">
-          <span class="logo logo-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="4"/><path d="M5 20c1.5-3.5 4-5 7-5s5.5 1.5 7 5"/><path d="M12 2v3"/></svg></span>
-          <div>
-            <h4>Agents IA pour le site d’un client</h4>
-            <p class="mono">Projet d’entreprise · 2026</p>
-          </div>
-        </div>
-        <p class="mini-line">Des agents LLM qui créent des composants testés en A/B via un CMS headless exposé en MCP, derrière OAuth.</p>
-        <ul class="tags"><li>Python</li><li>Django</li><li>MCP</li><li>OAuth</li></ul>
-      </li>
-      <li class="mini reveal">
-        <div class="mini-head">
-          <span class="logo logo-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="8" width="8" height="8" rx="2"/><rect x="13.5" y="8" width="8" height="8" rx="2"/><path d="M10.5 12h3"/></svg></span>
-          <div>
-            <h4>dApp de crowdfunding décentralisé</h4>
-            <p class="mono">Projet universitaire · mars – mai 2025</p>
-          </div>
-        </div>
-        <p class="mini-line">Connexion wallet sans gas, métadonnées sur IPFS et déblocage des fonds par jalons on-chain. Équipe de 3.</p>
-        <ul class="tags"><li>Solidity</li><li>Foundry</li><li>NestJS</li><li>MongoDB</li><li>React</li><li>Ethers.js</li></ul>
-      </li>
-      <li class="mini reveal">
-        <div class="mini-head">
-          <span class="logo logo-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.5 2"/></svg></span>
-          <div>
-            <h4>Twig, l’agent de suivi sur Slack</h4>
-            <p class="mono">Projet d’entreprise · 2026</p>
-          </div>
-        </div>
-        <p class="mini-line">Un cron de 15 minutes compare l’heure de rappel et le fuseau de chacun, pour un envoi sans état et au plus une fois. Utilisé par une équipe de 5.</p>
-        <ul class="tags"><li>TypeScript</li><li>eve</li><li>Slack API</li><li>Notion API</li></ul>
-      </li>
-      <li class="mini reveal">
-        <div class="mini-head">
-          <span class="logo logo-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg></span>
-          <div>
-            <h4>Calculateur de CO2 résidentiel</h4>
-            <p class="mono">Projet d’entreprise · 2025</p>
-          </div>
-        </div>
-        <p class="mini-line">Plus de 40 formules énergétiques et financières, simulation PV horaire et 12 modèles de rénovation, en package du monorepo.</p>
-        <ul class="tags"><li>Next.js</li><li>TypeScript</li></ul>
-      </li>
-      <li class="mini reveal">
-        <div class="mini-head">
-          <span class="logo logo-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12h4l2.5-6 4 12 2.5-6h6"/></svg></span>
-          <div>
-            <h4>Plateforme de suivi de patients</h4>
-            <p class="mono">Freelance · janv. – déc. 2025</p>
-          </div>
-        </div>
-        <p class="mini-line">Une application de santé conçue pour des milliers de dossiers patients, couverte par plus de 30 tests unitaires, fonctionnels et d’intégration.</p>
-        <ul class="tags"><li>NestJS</li><li>MySQL</li><li>React</li></ul>
-      </li>
-      <li class="mini reveal">
-        <div class="mini-head">
-          <span class="logo logo-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17a8 8 0 1 1 16 0"/><path d="M12 17l4-5"/></svg></span>
-          <div>
-            <h4>API de monitoring de sites web</h4>
-            <p class="mono">Projet universitaire · déc. 2024</p>
-          </div>
-        </div>
-        <p class="mini-line">Suivi des performances en temps réel, avec les patterns Strategy et Singleton pour des notifications évolutives.</p>
-        <ul class="tags"><li>C#</li><li>.NET</li><li>MySQL</li></ul>
-      </li>
-      <li class="mini reveal">
-        <div class="mini-head">
-          <span class="logo logo-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span>
-          <div>
-            <h4>Backend de tableau de bord financier</h4>
-            <p class="mono">Junior Entreprise INSAT · août – oct. 2024</p>
-          </div>
-        </div>
-        <p class="mini-line">Plus de 15 endpoints documentés avec Swagger, avec cache pour les gros volumes financiers.</p>
-        <ul class="tags"><li>NestJS</li><li>MySQL</li><li>TypeORM</li></ul>
-      </li>
-      <li class="mini reveal">
-        <div class="mini-head">
-          <span class="logo logo-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2.5l2 11h10.5l2-8H7"/><circle cx="9.5" cy="19.5" r="1.3"/><circle cx="17" cy="19.5" r="1.3"/></svg></span>
-          <div>
-            <h4>Plateforme e-commerce</h4>
-            <p class="mono">Prima Pub · août – oct. 2024</p>
-          </div>
-        </div>
-        <p class="mini-line">Construite en 6 semaines, avec 100 en desktop et 96 en mobile sur PageSpeed.</p>
-        <ul class="tags"><li>Next.js</li><li>Prisma</li><li>PostgreSQL</li></ul>
-      </li></ul>
-    </div>
-  </section>
-
-  <section class="section" id="skills" aria-labelledby="skills-title">
-    <div class="wrap">
-      <header class="sec-head"><span class="sec-n">§04</span><h2 id="skills-title">Compétences</h2></header>
-      <div class="skill-grid">
-        
-        <div class="skill reveal">
-          <h3 class="mini-title">Langages</h3>
-          <ul class="tags"><li>TypeScript / JavaScript</li><li>C++</li><li>Go</li><li>Python</li><li>Solidity</li><li>Java</li><li>C#</li><li>SQL</li></ul>
-        </div>
-        <div class="skill reveal">
-          <h3 class="mini-title">IA et agents</h3>
-          <ul class="tags"><li>RAG</li><li>Recherche vectorielle et embeddings</li><li>Agents LLM</li><li>Mémoire d’agent</li><li>MCP</li><li>OAuth pour agents</li><li>Pipelines pilotés par LLM</li><li>eve</li><li>Vercel AI SDK</li><li>Personnalisation efficace de LLM</li><li>Claude Code</li></ul>
-        </div>
-        <div class="skill reveal">
-          <h3 class="mini-title">Backend</h3>
-          <ul class="tags"><li>NestJS</li><li>Next.js API routes</li><li>Django</li><li>gRPC</li><li>REST</li><li>OAuth</li><li>Symfony</li><li>.NET</li></ul>
-        </div>
-        <div class="skill reveal">
-          <h3 class="mini-title">Frontend</h3>
-          <ul class="tags"><li>Next.js (App Router, RSC)</li><li>React</li><li>Nuxt.js</li><li>Tailwind CSS</li></ul>
-        </div>
-        <div class="skill reveal">
-          <h3 class="mini-title">Bases de données</h3>
-          <ul class="tags"><li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li><li>Redis</li><li>Turso / libSQL</li><li>Tinybird</li><li>Drizzle ORM</li><li>TypeORM</li><li>Prisma</li></ul>
-        </div>
-        <div class="skill reveal">
-          <h3 class="mini-title">Systèmes distribués</h3>
-          <ul class="tags"><li>Réplication et tolérance aux pannes</li><li>gRPC et Protocol Buffers</li><li>Architecture événementielle</li><li>Architecture Lambda</li></ul>
-        </div>
-        <div class="skill reveal">
-          <h3 class="mini-title">Blockchain / Web3</h3>
-          <ul class="tags"><li>Solidity</li><li>Foundry</li><li>Ethers.js</li><li>IPFS</li><li>Déploiement de smart contracts</li></ul>
-        </div>
-        <div class="skill reveal">
-          <h3 class="mini-title">DevOps et observabilité</h3>
-          <ul class="tags"><li>Docker</li><li>CI/CD</li><li>Vercel</li><li>Linux et SSH</li><li>Cloudways</li><li>OpenTelemetry</li><li>PostHog</li><li>Prometheus et Grafana</li></ul>
-        </div>
-        <div class="skill reveal">
-          <h3 class="mini-title">Algorithmique</h3>
-          <ul class="tags"><li>Algorithmes de graphes</li><li>Fenêtre glissante</li><li>Sommes préfixes</li><li>Deux pointeurs</li><li>Arbres</li><li>C++ de compétition</li></ul>
-        </div>
-        <div class="skill reveal">
-          <h3 class="mini-title">Pratiques</h3>
-          <ul class="tags"><li>Scrum</li><li>Git</li><li>Revue de code</li><li>Conception de systèmes</li><li>Design patterns</li><li>POO</li><li>Tests unitaires, d’intégration et E2E</li><li>Swagger / OpenAPI</li></ul>
-        </div>
-        <div class="skill reveal">
-          <h3 class="mini-title">Langues parlées</h3>
-          <ul class="spoken"><li><span>Anglais</span><span class="mono">Avancé</span></li><li><span>Français</span><span class="mono">Intermédiaire, B1/B2</span></li><li><span>Allemand</span><span class="mono">Débutant, A1</span></li></ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="education" aria-labelledby="education-title">
-    <div class="wrap">
-      <header class="sec-head"><span class="sec-n">§05</span><h2 id="education-title">Formation et distinctions</h2></header>
-      <div class="edu-grid">
-        <div class="edu reveal">
-          <div class="org-head">
-            <span class="logo" aria-hidden="true">IN</span>
-            <div class="org-id">
-              <h3>Diplôme national d’ingénieur, génie logiciel</h3>
-              <p class="mono">INSAT, Institut National des Sciences Appliquées et de Technologie</p>
-            </div>
-          </div>
-          <p class="mono dates edu-dates">2022 – 2027 · diplôme prévu en décembre 2027</p>
-          <p class="edu-line">Cursus de cinq ans, équivalent licence plus master. Socle de mathématiques et de physique, puis génie logiciel, IA et deep learning, blockchain, sécurité et Scrum.</p>
-          <p class="edu-cap"><a href="#p-ddr">Projet de synthèse : Distributed Dataset Repository</a></p>
-          <h3 class="mini-title">Certifications</h3>
-          <ul class="certs"><li><span>React Basics</span><span class="mono">Meta</span></li><li><span>Efficient Large Language Model (LLM) Customization</span></li></ul>
-        </div>
-        <ol class="awards reveal">
-          <li><span class="award-v">Top 15</span><span class="award-t">TCPC 2024, concours universitaire de programmation</span></li><li><span class="award-v">Top 10</span><span class="award-t">De façon régulière, aux concours nationaux de programmation, sept. à déc. 2024</span></li><li><span class="award-v">#1</span><span class="award-t">Contributeur en commits du monorepo des agents pendant le stage 2026</span></li><li><span class="award-v">4</span><span class="award-t">Agents de l’entreprise ont adopté le système de mémoire que j’ai conçu</span></li><li><span class="award-v">7</span><span class="award-t">Incidents de production diagnostiqués avec PostHog et OpenTelemetry</span></li>
-        </ol>
-      </div>
-    </div>
-  </section>
-
-  <section class="section contact" id="contact" aria-labelledby="contact-title">
-    <div class="wrap">
-      <div class="contact-grid">
-        <div>
-          <p class="sec-n contact-n">§06 · Contact</p>
-          <h2 class="contact-title" id="contact-title">Parlons-en.</h2>
-          <p class="contact-line">Je cherche un stage de fin d’études de 4 à 6 mois à partir de février 2027. Si vous construisez des agents ou les systèmes qui les portent, j’aimerais en discuter.</p>
-          <dl class="facts"><div><dt class="mono">Début</dt><dd>Février 2027</dd></div><div><dt class="mono">Durée</dt><dd>4 à 6 mois</dd></div><div><dt class="mono">Domaines</dt><dd>Agents IA, backend, systèmes distribués</dd></div></dl>
-        </div>
-        <div class="contact-actions">
-          <div class="email-box">
-            <span class="mono email-k">Email</span>
-            <a class="email" href="mailto:mouhib.bahri.se@gmail.com">mouhib.bahri.se@gmail.com</a>
-            <div class="email-actions">
-              <a class="btn btn-primary" href="mailto:mouhib.bahri.se@gmail.com">Écrire un e-mail<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-              <button class="btn btn-ghost copy" type="button" data-copy="mouhib.bahri.se@gmail.com" data-label="Copier l’e-mail" data-done="Copié"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg><span>Copier l’e-mail</span></button>
-            </div>
-          </div>
-          <div class="contact-links">
-            <a class="link-card" href="https://www.linkedin.com/in/mouhib-bahri" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span>LinkedIn</span><span class="mono">in/mouhib-bahri</span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
-            <a class="link-card" href="https://github.com/MouhibBahri" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg><span>GitHub</span><span class="mono">MouhibBahri</span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="hero" id="top" aria-labelledby="hero-name">
+<div class="hero-grid wrap">
+<div class="hero-copy">
+<p class="status"><span class="pulse" aria-hidden="true"></span>Disponible pour un stage de fin d’études à partir de février 2027</p>
+<h1 id="hero-name">Mouhib Bahri</h1>
+<p class="hero-role">Ingénieur logiciel, agents IA et systèmes distribués</p>
+<p class="hero-pitch">Je conçois des systèmes d’agents IA et l’infrastructure backend qui les porte : mémoire persistante, multi-tenant, observabilité et stockage distribué.</p>
+<p class="hero-sub">Élève ingénieur en dernière année de génie logiciel à l’INSAT, diplôme en 2027.</p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="#contact">Me contacter<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+<a class="btn btn-ghost" href="#projects">Voir les projets</a>
+<span class="hero-social">
+<a class="icon-btn" href="https://github.com/MouhibBahri" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg></a>
+<a class="icon-btn" href="https://www.linkedin.com/in/mouhib-bahri" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+<a class="icon-btn" href="mailto:mouhib.bahri.se@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg></a>
+</span>
+</div>
+</div>
+<figure class="hero-fig fig-card">
+<svg class="fx" viewBox="0 0 420 304" role="img" aria-label="Fig. 0  La pile sur laquelle je travaille" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 8 4 0 8z" class="fx-arrowhead"/></marker></defs><g class="fx-layer" style="--i:0"><rect x="70" y="18" width="330" height="46" rx="6"/><text class="fx-idx" x="54" y="45" text-anchor="end">L4</text><text class="fx-label fx-left" x="86" y="38">Runtime d’agents</text><text class="fx-sub fx-left" x="86" y="53">outils, tâches planifiées, sous-agents</text><circle class="fx-led" cx="382" cy="41" r="3.5"/></g><g class="fx-layer" style="--i:1"><rect x="70" y="74" width="330" height="46" rx="6"/><text class="fx-idx" x="54" y="101" text-anchor="end">L3</text><text class="fx-label fx-left" x="86" y="94">Mémoire persistante</text><text class="fx-sub fx-left" x="86" y="109">rappel vectoriel, décroissance, feedback</text><circle class="fx-led" cx="382" cy="97" r="3.5"/></g><g class="fx-layer" style="--i:2"><rect x="70" y="130" width="330" height="46" rx="6"/><text class="fx-idx" x="54" y="157" text-anchor="end">L2</text><text class="fx-label fx-left" x="86" y="150">Multi-tenant</text><text class="fx-sub fx-left" x="86" y="165">accès aux données par tenant</text><circle class="fx-led" cx="382" cy="153" r="3.5"/></g><g class="fx-layer" style="--i:3"><rect x="70" y="186" width="330" height="46" rx="6"/><text class="fx-idx" x="54" y="213" text-anchor="end">L1</text><text class="fx-label fx-left" x="86" y="206">Observabilité</text><text class="fx-sub fx-left" x="86" y="221">traces, logs, session replay</text><circle class="fx-led" cx="382" cy="209" r="3.5"/></g><g class="fx-layer" style="--i:4"><rect x="70" y="242" width="330" height="46" rx="6"/><text class="fx-idx" x="54" y="269" text-anchor="end">L0</text><text class="fx-label fx-left" x="86" y="262">Stockage distribué</text><text class="fx-sub fx-left" x="86" y="277">réplication, tolérance aux pannes</text><circle class="fx-led" cx="382" cy="265" r="3.5"/></g><path id="hspine" d="M354 12 V 296" class="fx-wire fx-dash"/><circle r="3.6" class="fx-dot"><animateMotion dur="5s" begin="0s" repeatCount="indefinite" rotate="auto"><mpath href="#hspine"/></animateMotion></circle></svg>
+<figcaption>Fig. 0  La pile sur laquelle je travaille</figcaption>
+</figure>
+</div>
+<div class="wrap"><dl class="stats"><div class="stat"><dt>commits sur une plateforme en production</dt><dd>690+</dd></div><div class="stat"><dt>pull requests fusionnées</dt><dd>100+</dd></div><div class="stat"><dt>communes et entreprises sur cette plateforme</dt><dd>90+</dd></div><div class="stat"><dt>autres agents réutilisent ma mémoire d’agent</dt><dd>4</dd></div><div class="stat"><dt>concours de programmation TCPC 2024</dt><dd>Top 15</dd></div><div class="stat"><dt>de stages et de travail à temps partiel</dt><dd>2+ ans</dd></div></dl></div>
+</section>
+<section class="section" id="about" aria-labelledby="about-title">
+<div class="wrap">
+<header class="sec-head"><span class="sec-n">§01</span><h2 id="about-title">Profil</h2></header>
+<div class="about-grid">
+<div class="about-text reveal">
+<p class="lead">Élève ingénieur en dernière année de génie logiciel à l’INSAT, avec plus de deux ans de stages et de travail à temps partiel sur des systèmes en production : agents IA, web full-stack, blockchain, DevOps et systèmes distribués. J’aime les problèmes qui ont une vraie profondeur technique, où je peux chercher, concevoir et porter une solution plutôt qu’appliquer un cahier des charges. Je travaille surtout en TypeScript et en C++. Mon terrain de prédilection est le backend et les systèmes, avec assez de polyvalence full-stack pour livrer de bout en bout.</p>
+<p>J’ai commencé par la programmation compétitive (C++), qui m’a donné l’aisance en algorithmique et en structures de données. Mon réflexe le plus fort est architectural : je lis d’abord les papiers et la documentation, puis je conçois le système correctement.</p>
+</div>
+<aside class="about-side reveal">
+<h3 class="mini-title">Ma façon de travailler</h3>
+<ol class="work-list"><li><span>01</span>Lire la documentation et les papiers avant d’écrire du code.</li><li><span>02</span>Prendre en main des problèmes flous, sans modèle existant.</li><li><span>03</span>Backend et systèmes d’abord, avec une vraie polyvalence full-stack.</li><li><span>04</span>Revue de code, tests unitaires et Scrum au quotidien.</li></ol>
+<h3 class="mini-title">Centres d’intérêt</h3>
+<ul class="tags"><li>Agents IA</li><li>Mémoire d’agent</li><li>RAG</li><li>Systèmes distribués</li><li>Architecture backend</li><li>Observabilité</li><li>Blockchain / Web3</li><li>DevOps</li></ul>
+</aside>
+</div>
+</div>
+</section>
+<section class="section" id="experience" aria-labelledby="experience-title">
+<div class="wrap">
+<header class="sec-head"><span class="sec-n">§02</span><h2 id="experience-title">Expérience</h2></header>
+<div class="orgs">
+<article class="org reveal">
+<header class="org-head">
+<span class="logo" aria-hidden="true">Tw</span>
+<div class="org-id">
+<h3>Twigbit Technologies GmbH</h3>
+<p class="mono">Berlin, Allemagne · À distance · 3 postes</p>
+</div>
+<span class="mono org-span">juil. 2025 – oct. 2026</span>
+</header>
+<ol class="roles">
+<li class="role">
+<div class="role-head"><h4>Ingénieur logiciel (temps partiel)</h4><span class="mono dates">oct. 2025 – oct. 2026</span></div>
+<p class="role-sum">Deux volets : la plateforme de développement durable 2zero, utilisée par plus de 90 communes et entreprises, et la refonte du site d’un grand client.</p>
+<div class="role-row">
+<ul class="metrics"><li>690+ commits</li><li>100+ PR fusionnées</li><li>20+ PR relues</li></ul>
+<button class="toggle" type="button" aria-expanded="false" aria-controls="hl-fr-1" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" class="i-plus"><path d="M12 5v14M5 12h14"/></svg><span>Détails</span><span class="count">4</span></button>
+</div>
+<ul class="points" id="hl-fr-1"><li>Développé plus de 10 pages et 50 fonctionnalités de l’application web 2zero, de l’interface aux routes API Next.js qui adaptent le backend existant.</li><li>Conçu l’authentification OTP : jetons d’accès et de rafraîchissement, vérification d’e-mail, limitation de débit sur Redis.</li><li>Mené l’intégration PostHog et OpenTelemetry, puis diagnostiqué 7 incidents de production grâce aux traces et au session replay.</li><li>Dans l’équipe de refonte, développé des agents LLM qui permettent au marketing du client de créer des composants à partir d’un prompt, via un CMS headless exposé en MCP avec OAuth.</li></ul>
+<ul class="tags"><li>Next.js</li><li>TypeScript</li><li>Drizzle</li><li>PostgreSQL</li><li>Redis</li><li>Tinybird</li><li>PostHog</li><li>OpenTelemetry</li><li>Python</li><li>Django</li><li>MCP</li></ul>
+</li>
+<li class="role">
+<div class="role-head"><h4>Stagiaire ingénieur logiciel, IA et automatisation</h4><span class="mono dates">juil. 2026 – sept. 2026</span></div>
+<p class="role-sum">À temps plein dans le monorepo TypeScript des agents de l’entreprise, dont j’ai été le premier contributeur en commits sur la période.</p>
+<div class="role-row">
+<ul class="metrics"><li>154 commits</li><li>16+ PR relues et fusionnées</li></ul>
+<button class="toggle" type="button" aria-expanded="false" aria-controls="hl-fr-2" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" class="i-plus"><path d="M12 5v14M5 12h14"/></svg><span>Détails</span><span class="count">4</span></button>
+</div>
+<ul class="points" id="hl-fr-2"><li>Conçu le système de mémoire persistante des agents, adopté ensuite par 4 autres agents.</li><li>Développé Woodpecker, un agent multi-tenant de content marketing, à partir d’un dossier vide.</li><li>Livré Twig, un agent Slack qui collecte le compte rendu quotidien de chaque membre de l’équipe dans Notion.</li><li>Développé des packages partagés : connexion par OTP e-mail avec Argon2id, e-mails transactionnels, type de colonne vectorielle.</li></ul>
+<ul class="tags"><li>TypeScript</li><li>Next.js</li><li>Turso</li><li>Drizzle</li><li>Vercel AI SDK</li><li>eve</li><li>Slack API</li><li>Notion API</li></ul>
+</li>
+<li class="role">
+<div class="role-head"><h4>Stagiaire ingénieur logiciel</h4><span class="mono dates">juil. 2025 – sept. 2025</span></div>
+<p class="role-sum">Un calculateur de CO2 résidentiel, livré en production avec Next.js et en package réutilisable du monorepo.</p>
+<div class="role-row">
+<ul class="metrics"><li>40+ formules</li><li>12 modèles de rénovation</li></ul>
+<button class="toggle" type="button" aria-expanded="false" aria-controls="hl-fr-3" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" class="i-plus"><path d="M12 5v14M5 12h14"/></svg><span>Détails</span><span class="count">2</span></button>
+</div>
+<ul class="points" id="hl-fr-3"><li>Recherché et modélisé des formules énergétiques et financières : dimensionnement CVC, simulation PV horaire sur données PVGIS, ROI et retour sur investissement.</li><li>Construit des modèles de rénovation avec analyse coûts-bénéfices et plans d’amortissement, des panneaux solaires à l’isolation.</li></ul>
+<ul class="tags"><li>Next.js</li><li>TypeScript</li></ul>
+</li></ol>
+</article>
+<article class="org single reveal">
+<header class="org-head">
+<span class="logo" aria-hidden="true">Ax</span>
+<div class="org-id">
+<h3>Développeur full-stack (temps partiel)</h3>
+<p class="mono"><span class="org-name">Axess Logistique</span> · Temps partiel</p>
+</div>
+<span class="mono org-span">nov. 2024 – mars 2025</span>
+</header>
+<div class="single-body">
+<p class="role-sum">Une plateforme de livraison B2B, dans un environnement startup.</p>
+<div class="role-row">
+<ul class="metrics"><li>165+ commits</li><li>40+ PR</li><li>2M+ lignes MySQL</li></ul>
+<button class="toggle" type="button" aria-expanded="false" aria-controls="hl-fr-4" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" class="i-plus"><path d="M12 5v14M5 12h14"/></svg><span>Détails</span><span class="count">3</span></button>
+</div>
+<ul class="points" id="hl-fr-4"><li>Refactoré du code Symfony historique pour les performances et administré les bases MySQL.</li><li>Travaillé directement avec plus de 10 utilisateurs métier, des chefs à la finance, sur les besoins et les correctifs.</li><li>Maintenu les serveurs Cloudways en SSH, avec un serveur de test avant chaque mise en production.</li></ul>
+<ul class="tags"><li>Symfony</li><li>MySQL</li><li>Twig</li><li>Tailwind CSS</li><li>Linux</li></ul></div>
+</article>
+<article class="org single reveal">
+<header class="org-head">
+<span class="logo" aria-hidden="true">Pp</span>
+<div class="org-id">
+<h3>Stagiaire développeur full-stack</h3>
+<p class="mono"><span class="org-name">Prima Pub</span> · À distance</p>
+</div>
+<span class="mono org-span">août 2024 – oct. 2024</span>
+</header>
+<div class="single-body">
+<p class="role-sum">Une plateforme e-commerce construite en 6 semaines, puis complétée par un tableau de bord d’administration.</p>
+<div class="role-row">
+<ul class="metrics"><li>100 PageSpeed desktop</li><li>96 mobile</li></ul>
+<button class="toggle" type="button" aria-expanded="false" aria-controls="hl-fr-5" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" class="i-plus"><path d="M12 5v14M5 12h14"/></svg><span>Détails</span><span class="count">2</span></button>
+</div>
+<ul class="points" id="hl-fr-5"><li>Rendu serveur et génération statique incrémentale : 92 en SEO, 92 en accessibilité, 100 en bonnes pratiques.</li><li>NextAuth.js avec contrôle d’accès par rôle basé sur JWT.</li></ul>
+<ul class="tags"><li>Next.js</li><li>TypeScript</li><li>Prisma</li><li>PostgreSQL</li><li>Tailwind CSS</li></ul></div>
+</article>
+<article class="org single reveal">
+<header class="org-head">
+<span class="logo" aria-hidden="true">JE</span>
+<div class="org-id">
+<h3>Stagiaire développeur backend</h3>
+<p class="mono"><span class="org-name">Junior Enterprise INSAT</span> · Association étudiante</p>
+</div>
+<span class="mono org-span">août 2024 – oct. 2024</span>
+</header>
+<div class="single-body">
+<p class="role-sum">Le backend d’un tableau de bord de gestion financière.</p>
+<div class="role-row">
+<ul class="metrics"><li>15+ endpoints</li><li>3 sprints</li></ul>
+<button class="toggle" type="button" aria-expanded="false" aria-controls="hl-fr-6" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" class="i-plus"><path d="M12 5v14M5 12h14"/></svg><span>Détails</span><span class="count">1</span></button>
+</div>
+<ul class="points" id="hl-fr-6"><li>Conçu l’API avec DTO et validation, documentée avec Swagger, avec mise en cache des gros volumes financiers.</li></ul>
+<ul class="tags"><li>NestJS</li><li>MySQL</li><li>TypeORM</li><li>Swagger</li></ul></div>
+</article></div>
+</div>
+</section>
+<section class="section" id="projects" aria-labelledby="projects-title">
+<div class="wrap">
+<header class="sec-head"><span class="sec-n">§03</span><h2 id="projects-title">Projets choisis</h2></header>
+<div class="cards">
+<article class="card reveal" id="p-memory">
+<figure class="card-fig">
+<svg class="fx" viewBox="0 0 400 222" role="img" aria-label="Mémoire persistante pour agents IA" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 8 4 0 8z" class="fx-arrowhead"/></marker></defs><g class="fx-node "><rect x="14" y="20" width="96" height="46" rx="6"/><text class="fx-label" x="62" y="41" text-anchor="middle">agent</text><text class="fx-sub" x="62" y="55" text-anchor="middle">outils mémoire</text></g><g class="fx-node "><rect x="290" y="20" width="96" height="46" rx="6"/><text class="fx-label" x="338" y="41" text-anchor="middle">libSQL</text><text class="fx-sub" x="338" y="55" text-anchor="middle">F8_BLOB · int8</text></g><path id="mw" d="M110 34 H290" class="fx-wire" marker-end="url(#ah)"/><text class="fx-sub" x="200" y="28" text-anchor="middle">store · 1024-d → int8</text><path id="mr" d="M290 54 H110" class="fx-wire" marker-end="url(#ah)"/><text class="fx-sub fx-accent-text" x="200" y="72" text-anchor="middle">(1 − d) · 0.95^Δdays · top 5</text><circle r="3.6" class="fx-dot"><animateMotion dur="3.2s" begin="0s" repeatCount="indefinite" rotate="auto"><mpath href="#mw"/></animateMotion></circle><circle r="3.6" class="fx-dot"><animateMotion dur="3.2s" begin="-1.6s" repeatCount="indefinite" rotate="auto"><mpath href="#mr"/></animateMotion></circle><text class="fx-cap" x="14" y="104">poids des souvenirs</text><text class="fx-sub fx-left" x="14" y="123">preference</text><rect class="fx-track" x="96" y="114" width="200" height="10" rx="2"/><rect class="fx-bar fx-bar-up" x="96" y="114" width="164" height="10" rx="2"/><text class="fx-sub fx-left" x="14" y="143">correction</text><rect class="fx-track" x="96" y="134" width="200" height="10" rx="2"/><rect class="fx-bar fx-bar-up" x="96" y="134" width="190" height="10" rx="2"/><text class="fx-sub fx-left" x="14" y="163">insight</text><rect class="fx-track" x="96" y="154" width="200" height="10" rx="2"/><rect class="fx-bar fx-bar-down" x="96" y="154" width="115.99999999999999" height="10" rx="2"/><text class="fx-sub fx-left" x="14" y="183">discovery</text><rect class="fx-track" x="96" y="174" width="200" height="10" rx="2"/><rect class="fx-bar fx-bar-down" x="96" y="174" width="72" height="10" rx="2"/><text class="fx-sub fx-left" x="14" y="203">insight</text><rect class="fx-track" x="96" y="194" width="200" height="10" rx="2"/><rect class="fx-bar fx-bar-gc" x="96" y="194" width="28.000000000000004" height="10" rx="2"/><text class="fx-sub fx-left" x="306" y="123">↑ EWMA</text><text class="fx-sub fx-left" x="306" y="143">α = 0.3</text><text class="fx-sub fx-left" x="306" y="163">↓ e^(−0.01t)</text><text class="fx-sub fx-left" x="306" y="183">t½ ≈ 69 d</text><text class="fx-sub fx-left" x="306" y="203">GC</text></svg>
+<figcaption><span>Fig. 1</span></figcaption>
+</figure>
+<div class="card-body">
+<div class="card-top">
+<span class="badge">Projet d’entreprise, code non public</span>
+</div>
+<h3>Mémoire persistante pour agents IA</h3>
+<p class="meta mono">juil. 2026<span aria-hidden="true">·</span>Conception et réalisation<span aria-hidden="true">·</span>Twigbit</p>
+<p class="card-line">Une mémoire RAG inter-sessions et auto-ajustée pour un agent en production. Elle s’améliore à l’usage et s’efface quand elle vieillit.</p>
+<details class="more">
+<summary><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" class="i-plus"><path d="M12 5v14M5 12h14"/></svg><span>Fonctionnement</span><span class="count">4</span></summary>
+<ul class="points"><li>Embeddings de 1024 dimensions, quantifiés en int8 dans des colonnes libSQL F8_BLOB via un type Drizzle sur mesure.</li><li>Classement par (1 − d) × 0,95^jours, plus injection automatique des meilleurs souvenirs en début de session.</li><li>Poids ajustés par le feedback de l’agent (EWMA, α = 0,3) et décroissance nocturne, demi-vie d’environ 69 jours.</li><li>Nettoyage nocturne, et les souvenirs rappelés sont traités comme des données, jamais comme des commandes.</li></ul>
+</details>
+<p class="result"><span class="mono">Résultat</span>Adopté comme modèle de mémoire par 4 autres agents de l’entreprise.</p>
+<ul class="tags"><li>TypeScript</li><li>Turso / libSQL</li><li>Drizzle</li><li>eve</li><li>Vercel AI SDK</li><li>RAG</li></ul>
+</div>
+</article>
+<article class="card reveal" id="p-ddr">
+<figure class="card-fig">
+<svg class="fx" viewBox="0 0 404 226" role="img" aria-label="Distributed Dataset Repository" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 8 4 0 8z" class="fx-arrowhead"/></marker></defs><g class="fx-node "><rect x="132" y="10" width="140" height="44" rx="6"/><text class="fx-label" x="202" y="30" text-anchor="middle">master</text><text class="fx-sub" x="202" y="44" text-anchor="middle">metadata · BoltDB</text></g><g class="fx-node "><rect x="10" y="128" width="60" height="44" rx="6"/><text class="fx-label" x="40" y="154" text-anchor="middle">client</text></g><g class="fx-node "><rect x="102" y="128" width="76" height="44" rx="6"/><text class="fx-label" x="140" y="148" text-anchor="middle">S1</text><text class="fx-sub" x="140" y="162" text-anchor="middle">replica</text></g><g class="fx-node "><rect x="210" y="128" width="76" height="44" rx="6"/><text class="fx-label" x="248" y="148" text-anchor="middle">S2</text><text class="fx-sub" x="248" y="162" text-anchor="middle">replica</text></g><g class="fx-node fx-tail"><rect x="318" y="128" width="76" height="44" rx="6"/><text class="fx-label" x="356" y="148" text-anchor="middle">S3</text><text class="fx-sub" x="356" y="162" text-anchor="middle">replica</text></g><path id="cw" d="M70 138 H102 M178 138 H210 M286 138 H318" class="fx-wire" marker-end="url(#ah)"/><path id="ca" d="M318 162 H286 M210 162 H178 M102 162 H70" class="fx-wire fx-dash" marker-end="url(#ah)"/><path id="cwp" d="M70 138 H318" fill="none" stroke="none"/><path id="cap" d="M318 162 H70" fill="none" stroke="none"/><path d="M140 128 L178 54 M248 128 L226 54 M356 128 L252 54" class="fx-wire fx-hb"/><circle cx="14" cy="196" r="3.6" class="fx-dot"/><text class="fx-sub fx-left" x="24" y="199">write</text><circle cx="74" cy="196" r="3.6" class="fx-dot fx-ack"/><text class="fx-sub fx-left" x="84" y="199">ack</text><path d="M128 196 h18" class="fx-wire fx-hb"/><text class="fx-sub fx-left" x="152" y="199">heartbeat 10 s · timeout 15 s</text><text class="fx-cap" x="10" y="218">64 MiB chunks · 1 MiB blocks · CRC32 · RF = 3</text><circle r="4" class="fx-dot"><animateMotion dur="4.4s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.42;1" calcMode="linear"><mpath href="#cwp"/></animateMotion><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.42;0.43;1" dur="4.4s" repeatCount="indefinite"/></circle><circle r="4" class="fx-dot fx-ack"><animateMotion dur="4.4s" repeatCount="indefinite" keyPoints="0;0;1;1" keyTimes="0;0.5;0.92;1" calcMode="linear"><mpath href="#cap"/></animateMotion><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.49;0.5;0.92;0.93" dur="4.4s" repeatCount="indefinite"/></circle><text class="fx-sub fx-accent-text fx-fsync" x="356" y="190" text-anchor="middle">fsync · seal<animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.4;0.43;0.55;0.6;1" dur="4.4s" repeatCount="indefinite"/></text></svg>
+<figcaption><span>Fig. 2</span></figcaption>
+</figure>
+<div class="card-body">
+<div class="card-top">
+<span class="badge badge-open">Projet de synthèse universitaire</span>
+<a class="link" href="https://github.com/Amir-Mallek/Distributed-Dataset-Repository" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>Dépôt</a>
+</div>
+<h3>Distributed Dataset Repository</h3>
+<p class="meta mono">févr. – mai 2026<span aria-hidden="true">·</span>Équipe de 4<span aria-hidden="true">·</span>~31 % du code écrit à la main</p>
+<p class="card-line">Un stockage de chunks répliqués pour datasets IA, en Go et gRPC, inspiré du Google File System et conçu pour des datasets de plus de 50 Go.</p>
+<details class="more">
+<summary><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" class="i-plus"><path d="M12 5v14M5 12h14"/></svg><span>Fonctionnement</span><span class="count">4</span></summary>
+<ul class="points"><li>Chunks de 64 Mio envoyés en blocs de 1 Mio vérifiés par CRC32, facteur de réplication 3 en chaîne.</li><li>J’ai réalisé la gestion des pannes du master : heartbeat toutes les 10 s, timeout de 15 s, re-réplication automatique.</li><li>Acquittements en chaîne : fsync, attente de l’aval, scellement, ack vers l’amont. Un ack client garantit que toutes les répliques sont persistées.</li><li>Une suite d’injection de pannes tue un nœud et corrompt un chunk dans Docker, puis vérifie le SHA-256 de la copie reconstruite.</li></ul>
+</details>
+<p class="result"><span class="mono">Résultat</span>Présenté aux enseignants du cours. Équipe : Amir Mallek, Roua Ayadi, Moncef Koubaa et moi.</p>
+<ul class="tags"><li>Go</li><li>gRPC</li><li>Protocol Buffers</li><li>BoltDB</li><li>Docker Compose</li></ul>
+</div>
+</article>
+<article class="card reveal" id="p-woodpecker">
+<figure class="card-fig">
+<svg class="fx" viewBox="0 0 400 222" role="img" aria-label="Woodpecker, agent de content marketing" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 8 4 0 8z" class="fx-arrowhead"/></marker></defs><g class="fx-node "><rect x="10" y="20" width="108" height="46" rx="6"/><text class="fx-label" x="64" y="41" text-anchor="middle">8 sources</text><text class="fx-sub" x="64" y="55" text-anchor="middle">RSS · SEO · CRM</text></g><g class="fx-node "><rect x="146" y="20" width="108" height="46" rx="6"/><text class="fx-label" x="200" y="41" text-anchor="middle">score 0–1</text><text class="fx-sub" x="200" y="55" text-anchor="middle">vs. clients cibles</text></g><g class="fx-node "><rect x="282" y="20" width="108" height="46" rx="6"/><text class="fx-label" x="336" y="41" text-anchor="middle">idées</text><text class="fx-sub" x="336" y="55" text-anchor="middle">hebdo / tenant</text></g><g class="fx-node "><rect x="282" y="110" width="108" height="46" rx="6"/><text class="fx-label" x="336" y="131" text-anchor="middle">plan</text><text class="fx-sub" x="336" y="145" text-anchor="middle">par canal</text></g><g class="fx-node "><rect x="146" y="110" width="108" height="46" rx="6"/><text class="fx-label" x="200" y="131" text-anchor="middle">brouillon</text><text class="fx-sub" x="200" y="145" text-anchor="middle">sous-agent</text></g><g class="fx-node "><rect x="10" y="110" width="108" height="46" rx="6"/><text class="fx-label" x="64" y="131" text-anchor="middle">relecture</text><text class="fx-sub" x="64" y="145" text-anchor="middle">commentaires</text></g><path id="pp" d="M118 43 H146 M254 43 H282 M336 66 V110 M282 133 H254 M146 133 H118" class="fx-wire" marker-end="url(#ah)"/><path id="ppm" d="M118 43 H282 M336 66 V110 M282 133 H118" fill="none" stroke="none"/><path d="M64 156 C64 182 200 182 200 156" class="fx-wire fx-dash" marker-end="url(#ah)"/><text class="fx-sub" x="132" y="190" text-anchor="middle">les commentaires relancent la rédaction</text><circle r="3.6" class="fx-dot"><animateMotion dur="5s" repeatCount="indefinite"><mpath href="#ppm"/></animateMotion></circle><text class="fx-cap" x="10" y="216">tenant_id filtré à la frontière d’accès aux données</text></svg>
+<figcaption><span>Fig. 3</span></figcaption>
+</figure>
+<div class="card-body">
+<div class="card-top">
+<span class="badge">Projet d’entreprise, code non public</span>
+</div>
+<h3>Woodpecker, agent de content marketing</h3>
+<p class="meta mono">juil. – sept. 2026<span aria-hidden="true">·</span>Réalisé de bout en bout<span aria-hidden="true">·</span>PR d’environ 13k lignes</p>
+<p class="card-line">Un agent multi-tenant qui surveille le marché, propose des idées, planifie par canal et rédige des posts ancrés dans leurs sources.</p>
+<details class="more">
+<summary><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" class="i-plus"><path d="M12 5v14M5 12h14"/></svg><span>Fonctionnement</span><span class="count">3</span></summary>
+<ul class="points"><li>Une vingtaine d’outils, dont une veille nocturne sur 8 types de sources, notées de 0 à 1 selon les clients cibles de chaque tenant.</li><li>Isolation des tenants appliquée dans 13 repositories, au niveau de l’accès aux données : aucune requête ne peut l’oublier.</li><li>Une application Next.js avec posts, calendrier et relecture, et un chat d’agent qui survit à un rafraîchissement.</li></ul>
+</details>
+<ul class="tags"><li>TypeScript</li><li>Next.js</li><li>eve</li><li>Turso</li><li>Drizzle</li><li>Vercel AI SDK</li></ul>
+</div>
+</article>
+<article class="card reveal" id="p-2zero">
+<figure class="card-fig">
+<svg class="fx" viewBox="0 0 400 214" role="img" aria-label="Plateforme web 2zero" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 8 4 0 8z" class="fx-arrowhead"/></marker></defs><g class="fx-node "><rect x="10" y="20" width="100" height="46" rx="6"/><text class="fx-label" x="60" y="41" text-anchor="middle">navigateur</text><text class="fx-sub" x="60" y="55" text-anchor="middle">Next.js</text></g><g class="fx-node "><rect x="150" y="20" width="100" height="46" rx="6"/><text class="fx-label" x="200" y="41" text-anchor="middle">API routes</text><text class="fx-sub" x="200" y="55" text-anchor="middle">Next.js</text></g><g class="fx-node fx-ghost"><rect x="290" y="20" width="100" height="46" rx="6"/><text class="fx-label" x="340" y="41" text-anchor="middle">backend</text><text class="fx-sub" x="340" y="55" text-anchor="middle">existant</text></g><g class="fx-node "><rect x="150" y="112" width="100" height="40" rx="6"/><text class="fx-label" x="200" y="130" text-anchor="middle">PostgreSQL</text><text class="fx-sub" x="200" y="144" text-anchor="middle">Drizzle</text></g><g class="fx-node "><rect x="290" y="112" width="100" height="40" rx="6"/><text class="fx-label" x="340" y="130" text-anchor="middle">Tinybird</text><text class="fx-sub" x="340" y="144" text-anchor="middle">events</text></g><g class="fx-node "><rect x="10" y="112" width="100" height="40" rx="6"/><text class="fx-label" x="60" y="130" text-anchor="middle">PostHog</text><text class="fx-sub" x="60" y="144" text-anchor="middle">OTLP</text></g><path id="o1" d="M110 43 H150 M250 43 H290" class="fx-wire" marker-end="url(#ah)"/><path d="M200 66 V112 M340 66 V112" class="fx-wire" marker-end="url(#ah)"/><path id="ot" d="M170 66 C150 92 110 92 80 112" class="fx-wire fx-dash fx-otel" marker-end="url(#ah)"/><path d="M50 66 V112" class="fx-wire fx-dash fx-otel" marker-end="url(#ah)"/><path id="o1m" d="M110 43 H290" fill="none" stroke="none"/><circle r="3.6" class="fx-dot"><animateMotion dur="3s" begin="0s" repeatCount="indefinite" rotate="auto"><mpath href="#o1m"/></animateMotion></circle><circle r="3.6" class="fx-dot"><animateMotion dur="3s" begin="-1.2s" repeatCount="indefinite" rotate="auto"><mpath href="#ot"/></animateMotion></circle><text class="fx-cap" x="10" y="186">traces · logs · erreurs · session replay</text><text class="fx-cap" x="10" y="204">prod · preview · local (Docker)</text></svg>
+<figcaption><span>Fig. 4</span></figcaption>
+</figure>
+<div class="card-body">
+<div class="card-top">
+<span class="badge">Projet d’entreprise, code non public</span>
+<a class="link" href="https://2zero.earth" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 17 17 7M9 7h8v8"/></svg>2zero.earth</a>
+</div>
+<h3>Plateforme web 2zero</h3>
+<p class="meta mono">oct. 2025 – oct. 2026<span aria-hidden="true">·</span>Développeur web principal<span aria-hidden="true">·</span>90+ organisations</p>
+<p class="card-line">Une plateforme de développement durable en production. J’ai été l’un des principaux développeurs de sa version web dès le premier jour.</p>
+<details class="more">
+<summary><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" class="i-plus"><path d="M12 5v14M5 12h14"/></svg><span>Fonctionnement</span><span class="count">3</span></summary>
+<ul class="points"><li>Plus de 10 pages et 50 fonctionnalités, de la modération communautaire à une carte Leaflet et des classements.</li><li>Authentification OTP, logs et traces envoyés en OTLP vers PostHog, avec des stack traces lisibles en production.</li><li>Gestion des dates migrée vers l’API Temporal, pour des comptes à rebours et classements justes quel que soit le fuseau.</li></ul>
+</details>
+<ul class="tags"><li>Next.js</li><li>TypeScript</li><li>PostgreSQL</li><li>Redis</li><li>Tinybird</li><li>PostHog</li><li>OpenTelemetry</li></ul>
+</div>
+</article></div>
+<h3 class="sub-title">Autres projets</h3>
+<ul class="minis">
+<li class="mini reveal">
+<div class="mini-head">
+<span class="logo logo-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="4"/><path d="M5 20c1.5-3.5 4-5 7-5s5.5 1.5 7 5"/><path d="M12 2v3"/></svg></span>
+<div>
+<h4>Agents IA pour le site d’un client</h4>
+<p class="mono">Projet d’entreprise · 2026</p>
+</div>
+</div>
+<p class="mini-line">Des agents LLM qui créent des composants testés en A/B via un CMS headless exposé en MCP, derrière OAuth.</p>
+<ul class="tags"><li>Python</li><li>Django</li><li>MCP</li><li>OAuth</li></ul>
+</li>
+<li class="mini reveal">
+<div class="mini-head">
+<span class="logo logo-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="8" width="8" height="8" rx="2"/><rect x="13.5" y="8" width="8" height="8" rx="2"/><path d="M10.5 12h3"/></svg></span>
+<div>
+<h4>dApp de crowdfunding décentralisé</h4>
+<p class="mono">Projet universitaire · mars – mai 2025</p>
+</div>
+</div>
+<p class="mini-line">Connexion wallet sans gas, métadonnées sur IPFS et déblocage des fonds par jalons on-chain. Équipe de 3.</p>
+<ul class="tags"><li>Solidity</li><li>Foundry</li><li>NestJS</li><li>MongoDB</li><li>React</li><li>Ethers.js</li></ul>
+</li>
+<li class="mini reveal">
+<div class="mini-head">
+<span class="logo logo-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.5 2"/></svg></span>
+<div>
+<h4>Twig, l’agent de suivi sur Slack</h4>
+<p class="mono">Projet d’entreprise · 2026</p>
+</div>
+</div>
+<p class="mini-line">Un cron de 15 minutes compare l’heure de rappel et le fuseau de chacun, pour un envoi sans état et au plus une fois. Utilisé par une équipe de 5.</p>
+<ul class="tags"><li>TypeScript</li><li>eve</li><li>Slack API</li><li>Notion API</li></ul>
+</li>
+<li class="mini reveal">
+<div class="mini-head">
+<span class="logo logo-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg></span>
+<div>
+<h4>Calculateur de CO2 résidentiel</h4>
+<p class="mono">Projet d’entreprise · 2025</p>
+</div>
+</div>
+<p class="mini-line">Plus de 40 formules énergétiques et financières, simulation PV horaire et 12 modèles de rénovation, en package du monorepo.</p>
+<ul class="tags"><li>Next.js</li><li>TypeScript</li></ul>
+</li>
+<li class="mini reveal">
+<div class="mini-head">
+<span class="logo logo-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12h4l2.5-6 4 12 2.5-6h6"/></svg></span>
+<div>
+<h4>Plateforme de suivi de patients</h4>
+<p class="mono">Freelance · janv. – déc. 2025</p>
+</div>
+</div>
+<p class="mini-line">Une application de santé conçue pour des milliers de dossiers patients, couverte par plus de 30 tests unitaires, fonctionnels et d’intégration.</p>
+<ul class="tags"><li>NestJS</li><li>MySQL</li><li>React</li></ul>
+</li>
+<li class="mini reveal">
+<div class="mini-head">
+<span class="logo logo-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17a8 8 0 1 1 16 0"/><path d="M12 17l4-5"/></svg></span>
+<div>
+<h4>API de monitoring de sites web</h4>
+<p class="mono">Projet universitaire · déc. 2024</p>
+</div>
+</div>
+<p class="mini-line">Suivi des performances en temps réel, avec les patterns Strategy et Singleton pour des notifications évolutives.</p>
+<ul class="tags"><li>C#</li><li>.NET</li><li>MySQL</li></ul>
+</li>
+<li class="mini reveal">
+<div class="mini-head">
+<span class="logo logo-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span>
+<div>
+<h4>Backend de tableau de bord financier</h4>
+<p class="mono">Junior Entreprise INSAT · août – oct. 2024</p>
+</div>
+</div>
+<p class="mini-line">Plus de 15 endpoints documentés avec Swagger, avec cache pour les gros volumes financiers.</p>
+<ul class="tags"><li>NestJS</li><li>MySQL</li><li>TypeORM</li></ul>
+</li>
+<li class="mini reveal">
+<div class="mini-head">
+<span class="logo logo-glyph" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2.5l2 11h10.5l2-8H7"/><circle cx="9.5" cy="19.5" r="1.3"/><circle cx="17" cy="19.5" r="1.3"/></svg></span>
+<div>
+<h4>Plateforme e-commerce</h4>
+<p class="mono">Prima Pub · août – oct. 2024</p>
+</div>
+</div>
+<p class="mini-line">Construite en 6 semaines, avec 100 en desktop et 96 en mobile sur PageSpeed.</p>
+<ul class="tags"><li>Next.js</li><li>Prisma</li><li>PostgreSQL</li></ul>
+</li></ul>
+</div>
+</section>
+<section class="section" id="skills" aria-labelledby="skills-title">
+<div class="wrap">
+<header class="sec-head"><span class="sec-n">§04</span><h2 id="skills-title">Compétences</h2></header>
+<div class="skill-grid">
+<div class="skill reveal">
+<h3 class="mini-title">Langages</h3>
+<ul class="tags"><li>TypeScript / JavaScript</li><li>C++</li><li>Go</li><li>Python</li><li>Solidity</li><li>Java</li><li>C#</li><li>SQL</li></ul>
+</div>
+<div class="skill reveal">
+<h3 class="mini-title">IA et agents</h3>
+<ul class="tags"><li>RAG</li><li>Recherche vectorielle et embeddings</li><li>Agents LLM</li><li>Mémoire d’agent</li><li>MCP</li><li>OAuth pour agents</li><li>Pipelines pilotés par LLM</li><li>eve</li><li>Vercel AI SDK</li><li>Personnalisation efficace de LLM</li><li>Claude Code</li></ul>
+</div>
+<div class="skill reveal">
+<h3 class="mini-title">Backend</h3>
+<ul class="tags"><li>NestJS</li><li>Next.js API routes</li><li>Django</li><li>gRPC</li><li>REST</li><li>OAuth</li><li>Symfony</li><li>.NET</li></ul>
+</div>
+<div class="skill reveal">
+<h3 class="mini-title">Frontend</h3>
+<ul class="tags"><li>Next.js (App Router, RSC)</li><li>React</li><li>Nuxt.js</li><li>Tailwind CSS</li></ul>
+</div>
+<div class="skill reveal">
+<h3 class="mini-title">Bases de données</h3>
+<ul class="tags"><li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li><li>Redis</li><li>Turso / libSQL</li><li>Tinybird</li><li>Drizzle ORM</li><li>TypeORM</li><li>Prisma</li></ul>
+</div>
+<div class="skill reveal">
+<h3 class="mini-title">Systèmes distribués</h3>
+<ul class="tags"><li>Réplication et tolérance aux pannes</li><li>gRPC et Protocol Buffers</li><li>Architecture événementielle</li><li>Architecture Lambda</li></ul>
+</div>
+<div class="skill reveal">
+<h3 class="mini-title">Blockchain / Web3</h3>
+<ul class="tags"><li>Solidity</li><li>Foundry</li><li>Ethers.js</li><li>IPFS</li><li>Déploiement de smart contracts</li></ul>
+</div>
+<div class="skill reveal">
+<h3 class="mini-title">DevOps et observabilité</h3>
+<ul class="tags"><li>Docker</li><li>CI/CD</li><li>Vercel</li><li>Linux et SSH</li><li>Cloudways</li><li>OpenTelemetry</li><li>PostHog</li><li>Prometheus et Grafana</li></ul>
+</div>
+<div class="skill reveal">
+<h3 class="mini-title">Algorithmique</h3>
+<ul class="tags"><li>Algorithmes de graphes</li><li>Fenêtre glissante</li><li>Sommes préfixes</li><li>Deux pointeurs</li><li>Arbres</li><li>C++ de compétition</li></ul>
+</div>
+<div class="skill reveal">
+<h3 class="mini-title">Pratiques</h3>
+<ul class="tags"><li>Scrum</li><li>Git</li><li>Revue de code</li><li>Conception de systèmes</li><li>Design patterns</li><li>POO</li><li>Tests unitaires, d’intégration et E2E</li><li>Swagger / OpenAPI</li></ul>
+</div>
+<div class="skill reveal">
+<h3 class="mini-title">Langues parlées</h3>
+<ul class="spoken"><li><span>Anglais</span><span class="mono">Avancé</span></li><li><span>Français</span><span class="mono">Intermédiaire, B1/B2</span></li><li><span>Allemand</span><span class="mono">Débutant, A1</span></li></ul>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="education" aria-labelledby="education-title">
+<div class="wrap">
+<header class="sec-head"><span class="sec-n">§05</span><h2 id="education-title">Formation et distinctions</h2></header>
+<div class="edu-grid">
+<div class="edu reveal">
+<div class="org-head">
+<span class="logo" aria-hidden="true">IN</span>
+<div class="org-id">
+<h3>Diplôme national d’ingénieur, génie logiciel</h3>
+<p class="mono">INSAT, Institut National des Sciences Appliquées et de Technologie</p>
+</div>
+</div>
+<p class="mono dates edu-dates">2022 – 2027 · diplôme prévu en décembre 2027</p>
+<p class="edu-line">Cursus de cinq ans, équivalent licence plus master. Socle de mathématiques et de physique, puis génie logiciel, IA et deep learning, blockchain, sécurité et Scrum.</p>
+<p class="edu-cap"><a href="#p-ddr">Projet de synthèse : Distributed Dataset Repository</a></p>
+<h3 class="mini-title">Certifications</h3>
+<ul class="certs"><li><span>React Basics</span><span class="mono">Meta</span></li><li><span>Efficient Large Language Model (LLM) Customization</span></li></ul>
+</div>
+<ol class="awards reveal">
+<li><span class="award-v">Top 15</span><span class="award-t">TCPC 2024, concours universitaire de programmation</span></li><li><span class="award-v">Top 10</span><span class="award-t">De façon régulière, aux concours nationaux de programmation, sept. à déc. 2024</span></li><li><span class="award-v">#1</span><span class="award-t">Contributeur en commits du monorepo des agents pendant le stage 2026</span></li><li><span class="award-v">4</span><span class="award-t">Agents de l’entreprise ont adopté le système de mémoire que j’ai conçu</span></li><li><span class="award-v">7</span><span class="award-t">Incidents de production diagnostiqués avec PostHog et OpenTelemetry</span></li>
+</ol>
+</div>
+</div>
+</section>
+<section class="section contact" id="contact" aria-labelledby="contact-title">
+<div class="wrap">
+<div class="contact-grid">
+<div>
+<p class="sec-n contact-n">§06 · Contact</p>
+<h2 class="contact-title" id="contact-title">Parlons-en.</h2>
+<p class="contact-line">Je cherche un stage de fin d’études de 4 à 6 mois à partir de février 2027. Si vous construisez des agents ou les systèmes qui les portent, j’aimerais en discuter.</p>
+<dl class="facts"><div><dt class="mono">Début</dt><dd>Février 2027</dd></div><div><dt class="mono">Durée</dt><dd>4 à 6 mois</dd></div><div><dt class="mono">Domaines</dt><dd>Agents IA, backend, systèmes distribués</dd></div></dl>
+</div>
+<div class="contact-actions">
+<div class="email-box">
+<span class="mono email-k">Email</span>
+<a class="email" href="mailto:mouhib.bahri.se@gmail.com">mouhib.bahri.se@gmail.com</a>
+<div class="email-actions">
+<a class="btn btn-primary" href="mailto:mouhib.bahri.se@gmail.com">Écrire un e-mail<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+<button class="btn btn-ghost copy" type="button" data-copy="mouhib.bahri.se@gmail.com" data-label="Copier l’e-mail" data-done="Copié"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg><span>Copier l’e-mail</span></button>
+</div>
+</div>
+<div class="contact-links">
+<a class="link-card" href="https://www.linkedin.com/in/mouhib-bahri" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span>LinkedIn</span><span class="mono">in/mouhib-bahri</span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+<a class="link-card" href="https://github.com/MouhibBahri" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg><span>GitHub</span><span class="mono">MouhibBahri</span><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+</div>
+</div>
+</div>
+</div>
+</section>
 </main>
-
-  <footer class="foot">
-    <div class="wrap foot-in">
-      <span>© 2026 Mouhib Bahri</span>
-      <span class="foot-mid">Conçu et développé par Mouhib Bahri.</span>
-      <a href="#top">Haut de page ↑</a>
-    </div>
-  </footer>
+<footer class="foot">
+<div class="wrap foot-in">
+<span>© 2026 Mouhib Bahri</span>
+<span class="foot-mid">Conçu et développé par Mouhib Bahri.</span>
+<a href="#top">Haut de page ↑</a>
+</div>
+</footer>
 <script src="../assets/js/site.js" defer></script>
 </body>
 </html>

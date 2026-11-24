@@ -1,6 +1,8 @@
 import * as C from "./content.mjs";
 import { figHero, figures, glyphs } from "./figures.mjs";
 
+// FONTS=google switches to Google Fonts (used when binary files cannot be pushed).
+const GOOGLE = typeof process !== "undefined" && process.env.FONTS === "google";
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 // French typography: narrow no-break space before high punctuation.
 const frTypo = (s) => s.replace(/ ([:;?!])/g, " $1");
@@ -310,8 +312,10 @@ export function render(lang) {
 <meta name="theme-color" content="#f6f4ef" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0e0e0d" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="${base}assets/img/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="${base}assets/fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="${base}assets/fonts/ibm-plex-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+${GOOGLE ? `<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&display=swap">` : `<link rel="preload" href="${base}assets/fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="${base}assets/fonts/ibm-plex-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>`}
 <script>
 (function(){var d=document.documentElement,s=null;d.classList.add("js");try{s=localStorage.getItem("theme")}catch(e){}
 d.dataset.theme=s||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");
