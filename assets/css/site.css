@@ -284,6 +284,7 @@ h1 { font: 500 clamp(3rem, 6.2vw, 5.3rem)/.96 var(--serif); letter-spacing: -.03
 /* ---- skills ---- */
 .skill-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
 .skill { padding: 22px; }
+.skill-wide { grid-column: 1 / -1; }
 .skill h3 { display: flex; align-items: center; gap: 12px; font-size: 1rem; margin-bottom: 16px; }
 .skill-ic { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: var(--accent-soft); color: var(--accent-ink); flex: none; }
 .skill-ic svg { width: 18px; height: 18px; }

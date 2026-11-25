@@ -115,10 +115,12 @@ export const experience = [
       { en: "Led the PostHog and OpenTelemetry rollout, then diagnosed 7 production issues from traces and session replays.", fr: "Mené le déploiement de PostHog et OpenTelemetry, puis diagnostiqué 7 incidents de production via traces et session replays." },
       { en: "Developed LLM agents that let a large client’s marketers create design components from a prompt, through a headless CMS over MCP.", fr: "Développé des agents LLM permettant au marketing d’un grand client de créer des composants depuis un prompt, via un CMS headless en MCP." },
       { en: "Secured the team’s MCP server with OAuth, so external agents get access tokens from the CMS.", fr: "Sécurisé le serveur MCP de l’équipe avec OAuth : les agents externes obtiennent leurs jetons auprès du CMS." },
-      { en: "Reviewed 20+ teammate pull requests and wrote unit tests in a Scrum team.", fr: "Relu plus de 20 pull requests et écrit des tests unitaires au sein d’une équipe Scrum." },
+      { en: "Wrote 8 pytest and pytest-django test modules, run in CI, covering the MCP server, its OAuth token flow, the page-editing tools and search.", fr: "Écrit 8 modules de tests pytest et pytest-django, exécutés en CI, couvrant le serveur MCP, son flux de jetons OAuth, les outils d’édition de pages et la recherche." },
+      { en: "Wrote and maintained 25+ frontend component test files with Vitest and Testing Library, run in CI.", fr: "Écrit et maintenu plus de 25 fichiers de tests de composants frontend avec Vitest et Testing Library, exécutés en CI." },
+      { en: "Reviewed 20+ teammate pull requests in a Scrum team.", fr: "Relu plus de 20 pull requests au sein d’une équipe Scrum." },
     ],
     visible: 3,
-    tags: ["Next.js", "TypeScript", "PostgreSQL", "Redis", "PostHog", "OpenTelemetry", "Python", "Django", "MCP"],
+    tags: ["Next.js", "TypeScript", "PostgreSQL", "Redis", "PostHog", "OpenTelemetry", "Python", "Django", "MCP", "pytest", "Vitest", "Testing Library"],
   },
   {
     ...twigbit,
@@ -252,11 +254,11 @@ export const featured = [
       { en: "Designed for 50+ GB datasets: 64 MiB chunks, 1 MiB CRC32-checked blocks, replication factor 3.", fr: "Conçu pour des datasets de plus de 50 Go : chunks de 64 Mio, blocs de 1 Mio vérifiés par CRC32, facteur de réplication 3." },
       { en: "I built the master’s failure handling: heartbeats, dead-node detection and automatic re-replication.", fr: "J’ai réalisé la gestion des pannes du master : heartbeats, détection des nœuds morts et re-réplication automatique." },
       { en: "Chained acks: fsync, wait for downstream, seal, ack upstream. A client ack means every replica persisted.", fr: "Acks en chaîne : fsync, attente de l’aval, scellement, ack vers l’amont. Un ack client garantit la persistance de toutes les répliques." },
-      { en: "A failure-injection suite kills a node, corrupts a chunk, and checks the rebuilt copy’s SHA-256.", fr: "Une suite d’injection de pannes tue un nœud, corrompt un chunk et vérifie le SHA-256 de la copie reconstruite." },
+      { en: "An end-to-end fault-tolerance suite on the Docker Compose cluster stops a node, then corrupts a chunk, and checks each is re-replicated onto the spare node.", fr: "Une suite de bout en bout sur le cluster Docker Compose arrête un nœud, puis corrompt un chunk, et vérifie leur re-réplication sur le nœud de secours." },
     ],
     team: ["AM", "RA", "MK", "MB"],
     result: { text: { en: "Presented to course faculty. About 31% of the hand-written code is mine.", fr: "Présenté aux enseignants. Environ 31 % du code écrit à la main est de moi." } },
-    tags: ["Go", "gRPC", "Protocol Buffers", "BoltDB", "Docker"],
+    tags: ["Go", "gRPC", "Protocol Buffers", "BoltDB", "Docker", "Bash", "E2E testing"],
   },
   {
     id: "dapp",
@@ -316,7 +318,7 @@ export const featured = [
 
 export const more = [
   { glyph: "clock", date: "2026", title: { en: "Twig, a Slack work-log agent", fr: "Twig, agent de suivi sur Slack" }, line: { en: "A 15-minute cron matches each user’s reminder time and time zone for stateless, at-most-once delivery. Used by a team of 5.", fr: "Un cron de 15 minutes compare l’heure de rappel et le fuseau de chacun, pour un envoi sans état et au plus une fois. Utilisé par une équipe de 5." }, tags: ["TypeScript", "eve", "Slack API", "Notion API"] },
-  { glyph: "pulse", date: { en: "Jan – Dec 2025", fr: "janv. – déc. 2025" }, title: { en: "Patient tracking platform", fr: "Plateforme de suivi de patients" }, line: { en: "A freelance healthcare app built for thousands of patient records, covered by 30+ unit, functional and integration tests.", fr: "Une app de santé en freelance, conçue pour des milliers de dossiers patients et couverte par plus de 30 tests." }, tags: ["NestJS", "MySQL", "React"] },
+  { glyph: "pulse", date: { en: "Jan – Dec 2025", fr: "janv. – déc. 2025" }, title: { en: "Patient tracking platform", fr: "Plateforme de suivi de patients" }, line: { en: "A freelance healthcare backend with RFID-based patient tracking. 160 unit tests with Jest and an end-to-end workflow suite with Supertest, run in GitHub Actions with coverage reports.", fr: "Un backend de santé en freelance avec suivi des patients par RFID. 160 tests unitaires avec Jest et une suite de bout en bout avec Supertest, exécutés dans GitHub Actions avec rapport de couverture." }, tags: ["NestJS", "TypeORM", "Jest", "Supertest", "GitHub Actions"] },
   { glyph: "gauge", date: { en: "Dec 2024", fr: "déc. 2024" }, title: { en: "Website runtime monitoring API", fr: "API de monitoring de sites web" }, line: { en: "Real-time performance tracking, with Strategy and Singleton patterns for scalable notifications.", fr: "Suivi des performances en temps réel, avec les patterns Strategy et Singleton pour des notifications évolutives." }, tags: ["C#", ".NET", "MySQL"] },
 ];
 
@@ -329,7 +331,8 @@ export const skills = [
   { icon: "nodes", g: { en: "Distributed systems", fr: "Systèmes distribués" }, items: ["Replication", "Fault tolerance", "gRPC", "Protocol Buffers", "Event-driven architecture"], itemsFr: ["Réplication", "Tolérance aux pannes", "gRPC", "Protocol Buffers", "Architecture événementielle"] },
   { icon: "chain", g: { en: "Blockchain", fr: "Blockchain" }, items: ["Solidity", "Foundry", "Ethers.js", "IPFS", "Smart contracts"] },
   { icon: "pulse", g: { en: "DevOps and observability", fr: "DevOps et observabilité" }, items: ["Docker", "CI/CD", "Vercel", "Linux", "OpenTelemetry", "PostHog", "Prometheus", "Grafana"] },
-  { icon: "check", g: { en: "Practices", fr: "Pratiques" }, items: ["Code review", "System design", "Design patterns", "Testing", "Agile Scrum", "Git", "Swagger"], itemsFr: ["Revue de code", "Conception de systèmes", "Design patterns", "Tests", "Scrum", "Git", "Swagger"] },
+  { icon: "check", g: { en: "Practices", fr: "Pratiques" }, items: ["Code review", "System design", "Design patterns", "Agile Scrum", "Git", "Swagger"], itemsFr: ["Revue de code", "Conception de systèmes", "Design patterns", "Scrum", "Git", "Swagger"] },
+  { icon: "pulse", wide: true, g: { en: "Automated testing", fr: "Tests automatisés" }, items: ["pytest", "pytest-django", "Jest", "ts-jest", "Vitest", "Testing Library", "Supertest", "Unit testing", "E2E testing", "Mocking and fixtures", "GitHub Actions", "CI/CD"], itemsFr: ["pytest", "pytest-django", "Jest", "ts-jest", "Vitest", "Testing Library", "Supertest", "Tests unitaires", "Tests de bout en bout", "Mocks et fixtures", "GitHub Actions", "CI/CD"] },
 ];
 
 export const spoken = [

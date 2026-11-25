@@ -200,7 +200,7 @@ export function render(lang) {
       ${C.skills.map((g) => {
         const items = fr && g.itemsFr ? g.itemsFr : g.items;
         return `
-      <div class="panel skill reveal" data-skills="${skillAttr(items)}" data-label="${T(g.g)}">
+      <div class="panel skill${g.wide ? " skill-wide" : ""} reveal" data-skills="${skillAttr(items)}" data-label="${T(g.g)}">
         <h3><span class="skill-ic">${glyph(g.icon)}</span>${T(g.g)}</h3>
         ${tags(items)}
       </div>`;
