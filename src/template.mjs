@@ -123,7 +123,7 @@ export function render(lang) {
     return `
       <article class="panel xp reveal" data-skills="${skillAttr(e.tags)}" data-label="${T(e.title)} · ${esc(e.company)}">
         <header class="xp-head">
-          <span class="logo" aria-hidden="true">${esc(e.mono)}</span>
+          ${e.logo ? `<span class="logo has-img" aria-hidden="true"><img src="${base}assets/img/logos/${e.logo}" alt="" width="48" height="48" loading="lazy"></span>` : `<span class="logo" aria-hidden="true">${esc(e.mono)}</span>`}
           <div class="xp-id">
             <h3>${T(e.title)}</h3>
             <p class="xp-co">${links}<span class="muted">${T(e.place)}</span></p>

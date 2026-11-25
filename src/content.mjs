@@ -88,6 +88,7 @@ const twigbit = {
   company: "twigbit",
   url: "https://www.twigbit.ai/en",
   mono: "Tw",
+  logo: "twigbit.webp",
   place: { en: "Berlin · Remote", fr: "Berlin · À distance" },
   about: {
     en: "Berlin software agency that brings AI agents into teams’ daily work and builds the software around them. It also runs 2zero, its own climate-tech platform.",
@@ -155,6 +156,7 @@ export const experience = [
   {
     company: "Axess Logistique",
     mono: "Ax",
+    logo: "axess.webp",
     place: { en: "Part-time", fr: "Temps partiel" },
     about: { en: "B2B delivery platform, built in a startup environment.", fr: "Plateforme de livraison B2B, dans un environnement startup." },
     title: { en: "Full-Stack Developer (Part-Time)", fr: "Développeur full-stack (temps partiel)" },
@@ -174,6 +176,7 @@ export const experience = [
   {
     company: "Prima Pub",
     mono: "Pp",
+    logo: "prima.webp",
     place: { en: "Remote", fr: "À distance" },
     about: { en: "eCommerce platform built for the client in 6 weeks.", fr: "Plateforme e-commerce réalisée pour le client en 6 semaines." },
     title: { en: "Full-Stack Developer Intern", fr: "Stagiaire développeur full-stack" },
