@@ -288,7 +288,7 @@ h1 { font: 500 clamp(3rem, 6.2vw, 5.3rem)/.96 var(--serif); letter-spacing: -.03
 .skill h3 { display: flex; align-items: center; gap: 12px; font-size: 1rem; margin-bottom: 16px; }
 .skill-ic { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: var(--accent-soft); color: var(--accent-ink); flex: none; }
 .skill-ic svg { width: 18px; height: 18px; }
-.spoken { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 26px; margin-top: 18px; padding: 14px 22px; border: 1px solid var(--line); border-radius: 14px; font-size: 15px; color: var(--ink); }
+.spoken { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 26px; margin-top: 18px; padding: 14px 22px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); font-size: 15px; color: var(--ink); }
 .spoken-k { font-weight: 600; margin-left: -12px; }
 .spoken .mono { font-size: 12px; margin-left: 4px; }
 
