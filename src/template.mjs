@@ -1,5 +1,9 @@
 import * as C from "./content.mjs";
 import { figures, glyphs } from "./figures.mjs";
+import { readFileSync } from "node:fs";
+import { createHash } from "node:crypto";
+const ver = (f) => createHash("sha1").update(readFileSync(new URL("../" + f, import.meta.url))).digest("hex").slice(0, 8);
+const V_CSS = ver("assets/css/site.css"), V_JS = ver("assets/js/site.js");
 
 // FONTS=google switches to Google Fonts (used when binary files cannot be pushed).
 const GOOGLE = typeof process !== "undefined" && process.env.FONTS === "google";
@@ -277,7 +281,7 @@ var p=new URLSearchParams(location.search).get("palette");if(p)d.dataset.palette
 ${fr ? "" : `try{if(!localStorage.getItem("lang")&&/^fr\\b/i.test(navigator.language||"")&&!/bot|crawl|spider/i.test(navigator.userAgent)){location.replace("fr/"+location.search+location.hash)}}catch(e){}`}
 })();
 </script>
-<link rel="stylesheet" href="${base}assets/css/site.css">
+<link rel="stylesheet" href="${base}assets/css/site.css?v=${V_CSS}">
 <script type="application/ld+json">${JSON.stringify({
     "@context": "https://schema.org", "@type": "Person", name: "Mouhib Bahri",
     jobTitle: fr ? "Ingénieur logiciel" : "Software Engineer", url, image: C.site.url + "/assets/img/mouhib.jpg",
@@ -340,7 +344,7 @@ ${skills}
 ${contact}
 ${footer}
 </main>
-<script src="${base}assets/js/site.js" defer></script>
+<script src="${base}assets/js/site.js?v=${V_JS}" defer></script>
 </body>
 </html>
 `;
