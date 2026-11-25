@@ -82,6 +82,7 @@ export const education = {
   school: { en: "National Institute of Applied Science and Technology (INSAT)", fr: "Institut National des Sciences Appliquées et de Technologie (INSAT)" },
   dates: { en: "2022 – expected Dec 2027", fr: "2022 – diplôme prévu en déc. 2027" },
   mono: "IN",
+  logo: "insat.webp",
 };
 
 const twigbit = {
@@ -100,11 +101,13 @@ export const experience = [
   {
     ...twigbit,
     title: { en: "Software Engineer (Part-Time)", fr: "Ingénieur logiciel (temps partiel)" },
+    logo: "2zero.webp",
     dates: { en: "Oct 2025 – Oct 2026", fr: "oct. 2025 – oct. 2026" },
     extra: [{ label: "2zero.earth", url: "https://2zero.earth" }],
     metrics: [
       { n: 690, suf: "+", l: { en: "commits", fr: "commits" } },
       { n: 100, suf: "+", l: { en: "merged PRs", fr: "PR fusionnées" } },
+      { n: 11, l: { en: "months part-time", fr: "mois à temps partiel" } },
     ],
     points: [
       { en: "Built 10+ pages and 50+ features of the 2zero web app, from the UI to the Next.js API routes over the existing backend.", fr: "Développé plus de 10 pages et 50 fonctionnalités de l’app web 2zero, de l’interface aux routes API Next.js sur le backend existant." },
@@ -124,7 +127,8 @@ export const experience = [
     dates: { en: "Jul 2026 – Sep 2026", fr: "juil. 2026 – sept. 2026" },
     extra: [{ label: { en: "Woodpecker agent", fr: "Agent Woodpecker" }, url: "https://www.twigbit.ai/en/agents/marketing" }],
     metrics: [
-      { n: 154, l: { en: "commits, #1 in the repo", fr: "commits, 1er du dépôt" } },
+      { n: 154, l: { en: "commits", fr: "commits" } },
+      { n: 1, pre: "#", l: { en: "contributor by commits", fr: "contributeur en commits" } },
       { n: 4, l: { en: "agents reuse my memory", fr: "agents réutilisent ma mémoire" } },
     ],
     points: [
@@ -196,6 +200,7 @@ export const experience = [
   {
     company: "Junior Enterprise INSAT",
     mono: "JE",
+    logo: "jeinsat.webp",
     place: { en: "Student association", fr: "Association étudiante" },
     about: { en: "Backend of a financial management dashboard.", fr: "Backend d’un tableau de bord de gestion financière." },
     title: { en: "Backend Developer Intern", fr: "Stagiaire développeur backend" },
@@ -329,8 +334,8 @@ export const skills = [
 
 export const spoken = [
   { l: { en: "English", fr: "Anglais" }, v: { en: "Advanced", fr: "Avancé" } },
-  { l: { en: "French", fr: "Français" }, v: { en: "B1/B2", fr: "B1/B2" } },
-  { l: { en: "German", fr: "Allemand" }, v: { en: "A1", fr: "A1" } },
+  { l: { en: "French", fr: "Français" }, v: { en: "Intermediate, professional use", fr: "Intermédiaire, usage professionnel" } },
+  { l: { en: "German", fr: "Allemand" }, v: { en: "Beginner", fr: "Débutant" } },
 ];
 
 export const contact = {

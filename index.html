@@ -108,20 +108,21 @@ try{if(!localStorage.getItem("lang")&&/^fr\b/i.test(navigator.language||"")&&!/b
 <section class="section" id="education" aria-labelledby="education-title">
 <header class="sec-head"><span class="sec-n">01</span><h2 id="education-title">Education</h2></header>
 <article class="panel edu reveal">
-<span class="logo" aria-hidden="true">IN</span>
+<span class="logo has-img" aria-hidden="true"><img src="./assets/img/logos/insat.webp" alt="" width="48" height="48"></span>
 <div>
 <h3>Engineering degree (Master’s level) in Software Engineering</h3>
 <p class="edu-school">National Institute of Applied Science and Technology (INSAT)</p>
 <p class="mono muted">2022 – expected Dec 2027</p>
 </div>
 </article>
+<p class="spoken reveal"><span class="skill-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 2.5 3.5 5.5 3.5 8.5s-1 6-3.5 8.5c-2.5-2.5-3.5-5.5-3.5-8.5s1-6 3.5-8.5z"/></svg></span><span class="spoken-k">Languages</span><span>English <span class="muted mono">Advanced</span></span><span>French <span class="muted mono">Intermediate, professional use</span></span><span>German <span class="muted mono">Beginner</span></span></p>
 </section>
 <section class="section" id="experience" aria-labelledby="experience-title">
 <header class="sec-head"><span class="sec-n">02</span><h2 id="experience-title">Experience</h2></header>
 <div class="xps">
 <article class="panel xp reveal" data-skills="next.js|typescript|postgresql|redis|posthog|opentelemetry|python|django|mcp" data-label="Software Engineer (Part-Time) · twigbit">
 <header class="xp-head">
-<span class="logo has-img" aria-hidden="true"><img src="./assets/img/logos/twigbit.webp" alt="" width="48" height="48" loading="lazy"></span>
+<span class="logo has-img" aria-hidden="true"><img src="./assets/img/logos/2zero.webp" alt="" width="48" height="48" loading="lazy"></span>
 <div class="xp-id">
 <h3>Software Engineer (Part-Time)</h3>
 <p class="xp-co"><a class="ext" href="https://www.twigbit.ai/en" target="_blank" rel="noopener">twigbit<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" class="i-ext"><path d="M7 17 17 7M9 7h8v8"/></svg></a><a class="ext" href="https://2zero.earth" target="_blank" rel="noopener">2zero.earth<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" class="i-ext"><path d="M7 17 17 7M9 7h8v8"/></svg></a><span class="muted">Berlin · Remote</span></p>
@@ -129,7 +130,7 @@ try{if(!localStorage.getItem("lang")&&/^fr\b/i.test(navigator.language||"")&&!/b
 <p class="xp-dates mono">Oct 2025 – Oct 2026</p>
 </header>
 <p class="xp-about">Berlin software agency that brings AI agents into teams’ daily work and builds the software around them. It also runs 2zero, its own climate-tech platform.</p>
-<dl class="kpis"><div><dd><span class="count" data-n="690" data-pre="" data-suf="+">690+</span></dd><dt>commits</dt></div><div><dd><span class="count" data-n="100" data-pre="" data-suf="+">100+</span></dd><dt>merged PRs</dt></div></dl>
+<dl class="kpis"><div><dd><span class="count" data-n="690" data-pre="" data-suf="+">690+</span></dd><dt>commits</dt></div><div><dd><span class="count" data-n="100" data-pre="" data-suf="+">100+</span></dd><dt>merged PRs</dt></div><div><dd><span class="count" data-n="11" data-pre="" data-suf="">11</span></dd><dt>months part-time</dt></div></dl>
 <ul class="points"><li>Built 10+ pages and 50+ features of the 2zero web app, from the UI to the Next.js API routes over the existing backend.</li><li>Architected the OTP authentication: access and refresh tokens, email verification, Redis rate limiting.</li><li>Led the PostHog and OpenTelemetry rollout, then diagnosed 7 production issues from traces and session replays.</li></ul>
 <ul class="points points-more" id="hl-1"><li>Developed LLM agents that let a large client’s marketers create design components from a prompt, through a headless CMS over MCP.</li><li>Secured the team’s MCP server with OAuth, so external agents get access tokens from the CMS.</li><li>Reviewed 20+ teammate pull requests and wrote unit tests in a Scrum team.</li></ul>
 <button class="toggle" type="button" aria-expanded="false" aria-controls="hl-1" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" class="i-plus"><path d="M12 5v14M5 12h14"/></svg><span>Highlights</span><span class="n">+3</span></button>
@@ -145,7 +146,7 @@ try{if(!localStorage.getItem("lang")&&/^fr\b/i.test(navigator.language||"")&&!/b
 <p class="xp-dates mono">Jul 2026 – Sep 2026</p>
 </header>
 <p class="xp-about">The company’s own AI agents, built full time in its core TypeScript monorepo.</p>
-<dl class="kpis"><div><dd><span class="count" data-n="154" data-pre="" data-suf="">154</span></dd><dt>commits, #1 in the repo</dt></div><div><dd><span class="count" data-n="4" data-pre="" data-suf="">4</span></dd><dt>agents reuse my memory</dt></div></dl>
+<dl class="kpis"><div><dd><span class="count" data-n="154" data-pre="" data-suf="">154</span></dd><dt>commits</dt></div><div><dd><span class="count" data-n="1" data-pre="#" data-suf="">#1</span></dd><dt>contributor by commits</dt></div><div><dd><span class="count" data-n="4" data-pre="" data-suf="">4</span></dd><dt>agents reuse my memory</dt></div></dl>
 <ul class="points"><li>Designed a persistent memory system that other agents in the company now reuse.</li><li>Built Woodpecker, a multi-tenant content-marketing agent, from an empty folder.</li><li>Shipped Twig, a Slack agent that logs each teammate’s daily work into Notion.</li></ul>
 <ul class="points points-more" id="hl-2"><li>Built shared packages: email-OTP sign-in with Argon2id, transactional email, a vector column type.</li></ul>
 <button class="toggle" type="button" aria-expanded="false" aria-controls="hl-2" hidden><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" class="i-plus"><path d="M12 5v14M5 12h14"/></svg><span>Highlights</span><span class="n">+1</span></button>
@@ -195,7 +196,7 @@ try{if(!localStorage.getItem("lang")&&/^fr\b/i.test(navigator.language||"")&&!/b
 </article>
 <article class="panel xp reveal" data-skills="nestjs|mysql|typeorm|swagger" data-label="Backend Developer Intern · Junior Enterprise INSAT">
 <header class="xp-head">
-<span class="logo" aria-hidden="true">JE</span>
+<span class="logo has-img" aria-hidden="true"><img src="./assets/img/logos/jeinsat.webp" alt="" width="48" height="48" loading="lazy"></span>
 <div class="xp-id">
 <h3>Backend Developer Intern</h3>
 <p class="xp-co"><span class="co">Junior Enterprise INSAT</span><span class="muted">Student association</span></p>
@@ -335,7 +336,6 @@ try{if(!localStorage.getItem("lang")&&/^fr\b/i.test(navigator.language||"")&&!/b
 <ul class="tags"><li data-skill="code review">Code review</li><li data-skill="system design">System design</li><li data-skill="design patterns">Design patterns</li><li data-skill="testing">Testing</li><li data-skill="agile scrum">Agile Scrum</li><li data-skill="git">Git</li><li data-skill="swagger">Swagger</li></ul>
 </div>
 </div>
-<p class="spoken reveal"><span class="skill-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 2.5 3.5 5.5 3.5 8.5s-1 6-3.5 8.5c-2.5-2.5-3.5-5.5-3.5-8.5s1-6 3.5-8.5z"/></svg></span><span class="spoken-k">Languages</span><span>English <span class="muted mono">Advanced</span></span><span>French <span class="muted mono">B1/B2</span></span><span>German <span class="muted mono">A1</span></span></p>
 </section>
 <section class="section contact" id="contact" aria-labelledby="contact-title">
 <div class="contact-grid">

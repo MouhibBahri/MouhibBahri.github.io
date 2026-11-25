@@ -104,13 +104,14 @@ export function render(lang) {
   <section class="section" id="education" aria-labelledby="education-title">
     ${secHead("education")}
     <article class="panel edu reveal">
-      <span class="logo" aria-hidden="true">${E.mono}</span>
+      <span class="logo has-img" aria-hidden="true"><img src="${base}assets/img/logos/${E.logo}" alt="" width="48" height="48"></span>
       <div>
         <h3>${T(E.degree)}</h3>
         <p class="edu-school">${T(E.school)}</p>
         <p class="mono muted">${T(E.dates)}</p>
       </div>
     </article>
+    <p class="spoken reveal"><span class="skill-ic">${glyph("lang")}</span><span class="spoken-k">${T(C.ui.spoken)}</span>${C.spoken.map((s) => `<span>${T(s.l)} <span class="muted mono">${T(s.v)}</span></span>`).join("")}</p>
   </section>`;
 
   // ---------- experience
@@ -205,7 +206,6 @@ export function render(lang) {
       </div>`;
       }).join("")}
     </div>
-    <p class="spoken reveal"><span class="skill-ic">${glyph("lang")}</span><span class="spoken-k">${T(C.ui.spoken)}</span>${C.spoken.map((s) => `<span>${T(s.l)} <span class="muted mono">${T(s.v)}</span></span>`).join("")}</p>
   </section>`;
 
   // ---------- contact
