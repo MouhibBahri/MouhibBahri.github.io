@@ -9,6 +9,6 @@ Personal portfolio of Mouhib Bahri, served by GitHub Pages from `main`.
 
 Edit the content, run the build, commit the generated files.
 
-Theme: the palette tokens are at the top of `assets/css/site.css`. Alternatives can be previewed with `?palette=cobalt`, `forest`, `crimson` or `amber`.
+Theme: the palette tokens are at the top of `assets/css/site.css`. Forest is the default palette; alternatives can be previewed with `?palette=signal` or `?palette=cobalt`. The skill search index is generated from the tags in `src/content.mjs`.
 
 Fonts: Newsreader and IBM Plex (SIL Open Font License).
